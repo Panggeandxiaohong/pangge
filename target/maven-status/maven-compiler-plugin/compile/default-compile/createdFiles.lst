@@ -1,0 +1,11 @@
+com\qjj\wx\util\XmlUtil$CollectionWrapper.class
+com\qjj\wechat\web\controller\WeixinController.class
+com\qjj\wx\util\BeanUtil.class
+com\qjj\wechat\service\CoreService.class
+com\qjj\wechat\damain\XmlMessageEntity.class
+com\qjj\wx\util\HttpUtil.class
+com\qjj\wx\web\controller\IndexController.class
+com\qjj\wx\util\XmlUtil.class
+com\qjj\wechat\util2\SignUtil.class
+com\qjj\wx\util\WeixinUtil.class
+com\qjj\wx\util\SecurityUtil.class
