@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="online.pangge.exam.mapper.PermissionMapper">
+    <resultMap id="BaseResultMap" type="online.pangge.exam.domain.Permission">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="resource" property="resource" jdbcType="VARCHAR"/>
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from permission
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+    insert into permission (name, resource)
+    select #{name}, #{resource} from dual where not EXISTS(SELECT 1 from permission where name=#{name});
+  </insert>
+    <update id="updateByPrimaryKey">
+    update permission
+    set name = #{name,jdbcType=VARCHAR},
+      resource = #{resource,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select id, name, resource
+    from permission
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+    <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, resource
+    from permission
+  </select>
+    <sql id="where_sql">
+        <where>
+            <if test="rid!=null">
+                id IN (SELECT p_id from role_permission where r_id =#{rid})
+            </if>
+        </where>
+    </sql>
+    <select id="queryForPage" resultType="online.pangge.exam.domain.Permission">
+        SELECT * FROM permission
+        <include refid="where_sql"/>
+        <if test="page!=null">
+            limit #{start},#{rows}
+        </if>
+    </select>
+    <select id="queryForPageCount" resultType="java.lang.Long">
+        select COUNT(*) from permission
+        <include refid="where_sql"/>
+    </select>
+    <select id="queryByEid" resultType="java.lang.String">
+        SELECT p.resource FROM permission p
+        LEFT JOIN role_permission rp ON (rp.p_id = p.id)
+        LEFT JOIN emp_role er ON (er.r_id = rp.r_id)
+        WHERE er.e_id = #{eid}
+    </select>
+</mapper>

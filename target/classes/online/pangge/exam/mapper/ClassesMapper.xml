@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="online.pangge.exam.mapper.ClassesMapper" >
+  <resultMap id="BaseResultMap" type="online.pangge.exam.domain.Classes" >
+    <id column="id" property="id"/>
+    <result column="class_name" property="className"/>
+    <result column="teacher" property="teacher"/>
+    <result column="create_date" property="createDate"/>
+    <result column="last_update_date" property="lastUpdateDate"/>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from classes
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="online.pangge.exam.domain.Classes" useGeneratedKeys="true" keyProperty="id" >
+    insert into classes (class_name, teacher,
+      create_date, last_update_date)
+    values (#{className,jdbcType=VARCHAR}, #{teacher,jdbcType=VARCHAR},
+      #{createDate,jdbcType=TIMESTAMP}, #{lastUpdateDate,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="online.pangge.exam.domain.Classes" >
+    update classes
+    set class_name = #{className,jdbcType=VARCHAR},
+      teacher = #{teacher,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      last_update_date = #{lastUpdateDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, class_name, teacher, create_date, last_update_date
+    from classes
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, class_name, teacher, create_date, last_update_date
+    from classes
+  </select>
+</mapper>

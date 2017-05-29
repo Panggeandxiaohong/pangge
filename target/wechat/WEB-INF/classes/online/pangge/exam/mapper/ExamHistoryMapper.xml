@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="online.pangge.exam.mapper.ExamHistoryMapper" >
+  <resultMap id="BaseResultMap" type="online.pangge.exam.mapper.ExamHistoryMapper" >
+    <id column="id" property="id"/>
+    <result column="score" property="score"/>
+    <result column="error_ids" property="errorIds"/>
+    <result column="sub_ids" property="subIds"/>
+    <result column="start_time" property="startTime"/>
+    <result column="end_time" property="endTime"/>
+    <result column="stu_id" property="stuId"/>
+    <result column="error_count" property="errorCount"/>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from exam_history
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="online.pangge.exam.domain.ExamHistory" useGeneratedKeys="true" keyProperty="id" >
+    insert into exam_history (score, error_ids, sub_ids, 
+      start_time, end_time, stu_id
+      )
+    values (#{score,jdbcType=DOUBLE}, #{errorIds,jdbcType=VARCHAR}, #{subIds,jdbcType=VARCHAR}, 
+      #{startTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, #{stuId,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="online.pangge.exam.domain.ExamHistory" >
+    update exam_history
+    set score = #{score,jdbcType=DOUBLE},
+      error_ids = #{errorIds,jdbcType=VARCHAR},
+      sub_ids = #{subIds,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      stu_id = #{stuId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, score, error_ids, sub_ids, start_time, end_time, stu_id
+    from exam_history
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, score, error_ids, sub_ids, start_time, end_time, stu_id
+    from exam_history
+  </select>
+</mapper>

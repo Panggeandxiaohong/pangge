@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="online.pangge.exam.mapper.MenuMapper">
+    <resultMap id="BaseResultMap" type="online.pangge.exam.domain.Menu">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="text" property="text" jdbcType="VARCHAR"/>
+        <result column="iconCls" property="iconCls" jdbcType="VARCHAR"/>
+        <result column="checked" property="checked" jdbcType="BIT"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="attributes" property="attributes" jdbcType="VARCHAR"/>
+        <result column="function" property="function" jdbcType="VARCHAR"/>
+        <collection property="children" column="id" select="online.pangge.exam.mapper.MenuMapper.queryByPid" ofType="online.pangge.exam.domain.Menu">
+        </collection>
+    </resultMap>
+    <select id="queryForRoot" resultMap="BaseResultMap">
+    SELECT * FROM menu WHERE parent_id IS NULL 
+  </select>
+    <select id="queryByPid" resultMap="BaseResultMap">
+    SELECT * FROM menu WHERE parent_id = #{pid}
+  </select>
+</mapper>

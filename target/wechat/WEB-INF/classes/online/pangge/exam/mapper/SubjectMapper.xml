@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="online.pangge.exam.mapper.SubjectMapper" >
+  <resultMap id="BaseResultMap" type="online.pangge.exam.domain.Subject" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="question" property="question" jdbcType="VARCHAR" />
+    <result column="A" property="answerA" jdbcType="VARCHAR" />
+    <result column="B" property="answerB" jdbcType="VARCHAR" />
+    <result column="C" property="answerC" jdbcType="VARCHAR" />
+    <result column="D" property="answerD" jdbcType="VARCHAR" />
+    <result column="answer" property="answer" jdbcType="VARCHAR" />
+    <result column="subject_explain" property="explain" jdbcType="VARCHAR" />
+    <result column="subject_type" property="type" jdbcType="VARCHAR" />
+    <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="score" property="score" jdbcType="DOUBLE" />
+    <result column="userAnswer" property="userAnswer" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <association property="classes" javaType="online.pangge.exam.domain.Classes" column="classes" select="online.pangge.exam.mapper.ClassesMapper.selectByPrimaryKey"/>
+    <association property="user" javaType="online.pangge.exam.domain.Student" column="userId" select="online.pangge.exam.mapper.StudentMapper.selectByPrimaryKey"/>
+    <association property="adduser" javaType="online.pangge.exam.domain.Student" column="adduser" select="online.pangge.exam.mapper.AdminMapper.selectByPrimaryKey"/>
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from subject
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="online.pangge.exam.domain.Subject" useGeneratedKeys="true" keyProperty="id" >
+    insert into subject (question, A, B, 
+      C, D, answer,subject_explain,subject_type, addtime, adduser,score, classes, userAnswer,url, userId)
+    values (#{question,jdbcType=VARCHAR}, #{answerA,jdbcType=VARCHAR}, #{answerB,jdbcType=VARCHAR},
+      #{answerC,jdbcType=VARCHAR}, #{answerD,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, #{explain,jdbcType=VARCHAR},
+      #{type,jdbcType=VARCHAR}, #{addtime,jdbcType=TIMESTAMP}, #{adduser.id,jdbcType=BIGINT},
+      #{score,jdbcType=DOUBLE}, #{classes.id}, #{userAnswer,jdbcType=VARCHAR},
+      #{url,jdbcType=VARCHAR}, #{user.id,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="online.pangge.exam.domain.Subject" >
+    update subject
+    set question = #{question,jdbcType=VARCHAR},
+      A = #{answerA,jdbcType=VARCHAR},
+      B = #{answerB,jdbcType=VARCHAR},
+      C = #{answerC,jdbcType=VARCHAR},
+      D = #{answerD,jdbcType=VARCHAR},
+      answer = #{answer,jdbcType=VARCHAR},
+      explain = #{explain,jdbcType=VARCHAR},
+      subject_type = #{type,jdbcType=VARCHAR},
+      addtime = #{addtime,jdbcType=TIMESTAMP},
+      adduser = #{adduser.id,jdbcType=BIGINT},
+      score = #{score,jdbcType=DOUBLE},
+      classes = #{classes,jdbcType=VARCHAR},
+      userAnswer = #{userAnswer,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      userId = #{user.id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, question, A, B, C, D, answer, subject_explain, subject_type, addtime, adduser, score,
+    classes, userAnswer, url, userId
+    from subject
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, question, A, B, C, D, answer, subject_explain, subject_type, addtime, adduser, score,
+    classes, userAnswer, url, userId
+    from subject
+  </select>
+  <select id="queryCount" resultType="long">
+    select count(*) from subject
+    <include refid="where_sql"/>
+  </select>
+  <sql id="where_sql">
+    <where>
+      <if test="keyword!=null">
+        (
+        question LIKE concat("%",#{keyword},"%")
+        OR subject_explain LIKE concat("%",#{keyword},"%")
+        OR classes LIKE concat("%",#{keyword},"%")
+        )
+      </if>
+      <if test="subjectType!=null">
+        and subject_type = #{status}
+      </if>
+    </where>
+  </sql>
+  <select id="queryList" resultMap="BaseResultMap">
+    select * from subject
+    <include refid="where_sql"/>
+    <if test="page!=null">
+      limit #{start},#{rows}
+    </if>
+  </select>
+</mapper>
