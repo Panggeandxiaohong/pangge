@@ -22,7 +22,7 @@ public class test {
 //      Student log = studentService.selectByPrimaryKey("204");
 //        List<Menu> m =menuService.queryForMenu();
         Permission p = new Permission();
-        p.setName("员工入职");
+        p.setName("传说中的离职");
         p.setResource("asdfasdfasdf");
         int i = permissionService.insert(p);
         System.out.println("影响的行数="+i);
