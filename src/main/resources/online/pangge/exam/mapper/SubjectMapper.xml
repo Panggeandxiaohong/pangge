@@ -8,6 +8,7 @@
     <result column="B" property="answerB" jdbcType="VARCHAR" />
     <result column="C" property="answerC" jdbcType="VARCHAR" />
     <result column="D" property="answerD" jdbcType="VARCHAR" />
+    <result column="mediaType" property="mediaType" jdbcType="VARCHAR" />
     <result column="answer" property="answer" jdbcType="VARCHAR" />
     <result column="subject_explain" property="explain" jdbcType="VARCHAR" />
     <result column="subject_type" property="type" jdbcType="VARCHAR" />
@@ -25,10 +26,10 @@
   </delete>
   <insert id="insert" parameterType="online.pangge.exam.domain.Subject" useGeneratedKeys="true" keyProperty="id" >
     insert into subject (question, A, B, 
-      C, D, answer,subject_explain,subject_type, addtime, adduser,score, classes, userAnswer,url, userId)
+      C, D, answer,subject_explain,subject_type, addtime,mediaType, adduser,score, classes, userAnswer,url, userId)
     values (#{question,jdbcType=VARCHAR}, #{answerA,jdbcType=VARCHAR}, #{answerB,jdbcType=VARCHAR},
       #{answerC,jdbcType=VARCHAR}, #{answerD,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, #{explain,jdbcType=VARCHAR},
-      #{type,jdbcType=VARCHAR}, #{addtime,jdbcType=TIMESTAMP}, #{adduser.id,jdbcType=BIGINT},
+      #{type,jdbcType=VARCHAR}, #{addtime,jdbcType=TIMESTAMP},#{mediaType,jdbcType=VARCHAR}, #{adduser.id,jdbcType=BIGINT},
       #{score,jdbcType=DOUBLE}, #{classes.id}, #{userAnswer,jdbcType=VARCHAR},
       #{url,jdbcType=VARCHAR}, #{user.id,jdbcType=BIGINT})
   </insert>
@@ -45,20 +46,21 @@
       addtime = #{addtime,jdbcType=TIMESTAMP},
       adduser = #{adduser.id,jdbcType=BIGINT},
       score = #{score,jdbcType=DOUBLE},
-      classes = #{classes,jdbcType=VARCHAR},
+      classes = #{classes.id},
+      mediaType = #{mediaType,jdbcType=VARCHAR},
       userAnswer = #{userAnswer,jdbcType=VARCHAR},
       url = #{url,jdbcType=VARCHAR},
       userId = #{user.id,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select id, question, A, B, C, D, answer, subject_explain, subject_type, addtime, adduser, score,
+    select id, question, A, B, C, D, answer, subject_explain,mediaType, subject_type, addtime, adduser, score,
     classes, userAnswer, url, userId
     from subject
     where id = #{id,jdbcType=BIGINT}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select id, question, A, B, C, D, answer, subject_explain, subject_type, addtime, adduser, score,
+    select id, question, A, B, C, D, answer, subject_explain,mediaType, subject_type, addtime, adduser, score,
     classes, userAnswer, url, userId
     from subject
   </select>

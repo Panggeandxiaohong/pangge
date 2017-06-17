@@ -5,15 +5,16 @@
     <title>微信考试系统</title>
     <%@ include file="common.jsp" %>
     <script type="text/javascript" src="/js/views/subject.js"></script>
+    <script type="text/javascript" src="/js/plugin/jquery-form.js"></script>
 </head>
 <body>
     <div id="subject_datagrid"></div>
     <%--新增/更新对话框--%>
     <div id="subject_dialog">
-        <form id="subject_form" method="post">
+        <form id="subject_form"  enctype="multipart/form-data" method="post">
             <input type="hidden" name="id"/>
             <table align="center" style="margin-top: 15px">
-                <tr>
+               <tr>
                     <td>问题描述</td>
                     <td><input type="text" name="question"/></td>
                 </tr>
@@ -58,8 +59,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>图片</td>
-                    <td><div id="swfu-placeholder"><input type="button" onclick="swfu.startUpload();" value="上传" />
+                    <td>题目附件</td>
+                    <td><input  id="myfile" type="file" name="myfiles"/></td>
                 </td>
                 </tr>
             </table>

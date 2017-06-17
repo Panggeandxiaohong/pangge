@@ -1,19 +1,7 @@
-/**
- * Created by jie34 on 2017/5/6.
- */
 $(function () {
-    var swfuOption = {//swfupload选项
-        upload_url : "http://labs.goodje.com/swfu/upload.php", //接收上传的服务端url
-        flash_url : "/js/plugin/swfupload/swfupload.swf",//swfupload压缩包解压后swfupload.swf的url
-        button_placeholder_id : "swfu-placeholder",//上传按钮占位符的id
-        file_size_limit : "20480",//用户可以选择的文件大小，有效的单位有B、KB、MB、GB，若无单位默认为KB
-        button_width: 200, //按钮宽度
-        button_height: 20, //按钮高度
-        button_text: 'file'//按钮文字
-}
-    var swfu = new SWFUpload(swfuOption);//初始化并将swfupload按钮替换swfupload占位符
-    var subjectDatagrid,subjectFormId,subject_dialog_bt,status,subjectDialog,subject_form;
+    var subjectDatagrid,subjectFormId,subject_dialog_bt,status,subjectDialog,subject_form,subjectForm,myfile;
     status = $("#status");
+    myfile = $("#myfile");
     subjectDatagrid=$("#subject_datagrid");
     subjectDialog=$("#subject_dialog");
     subjectForm=$("#subject_form");
@@ -39,15 +27,33 @@ $(function () {
                 subjectDialog.dialog("open");
                 subjectDialog.dialog("setTitle", "编辑");
                 subjectForm.form("clear");
-                /*//特殊属性的处理
-                if (rowData.inputUser) {
-                    rowData["inputUser.id"] = rowData.inputUser.id;
+                /*//特殊属性的处理*/
+                if (rowData.classes) {
+                    rowData["classes.className"] = rowData.classes.className;
                 }
-                if (rowData.inChargeUser) {
-                    rowData["inChargeUser.id"] = rowData.inChargeUser.id;
-                }*/
-                alert(rowData);
-                subjectForm.form("load", rowData);
+                if (rowData.type=="choice") {
+                    rowData["type"] = "选择题";
+                }
+                if (rowData.type=="empty") {
+                    rowData["type"] = "填空题";
+                }
+                if (rowData.type=="judge") {
+                    rowData["type"] = "判断题";
+                }
+                alert(rowData.classes.className);
+                subjectForm.form("load", {
+                    question:rowData.question,
+                    type:rowData.type,
+                    score:rowData.score,
+                    classes:rowData.classes.className,
+                    answerA:rowData.answerA,
+                    answerB:rowData.answerB,
+                    answerC:rowData.answerC,
+                    answerD:rowData.answerD,
+                    mediaType:rowData.mediaType?"text":rowData.mediaType,
+                    answer:rowData.answer,
+                    explain:rowData.explain
+                });
             } else {
                 $.messager.alert("温馨提示", "请选择需要编辑的题目", "info");
             }
@@ -82,6 +88,10 @@ $(function () {
         adminFormatr: function (value, row, index) {
             return value ? value.name : value;
         },
+        //媒体类型格式化
+        mediaTypeFormatr: function (value, row, index) {
+            return value ? value : "text";
+        },
         //刷新
         reload: function () {
             subjectDatagrid.datagrid("reload");
@@ -92,34 +102,31 @@ $(function () {
         },
         //保存
         save: function () {
+
             var url;
             if (subjectFormId.val()) {
                 url = "subjectomer_update.do";
             } else {
                 url = "subjectomer_save.do";
             }
-            //发送异步请求
             subjectForm.form("submit", {
-                url: url,
-                /*onSubmit: function (param) {
-                    param["type"] = "0";
-                },*/
-                contentType: false,
-                processData: false,
-                success: function (data) {
-                    data = $.parseJSON(data);
-                    if (data.success) {
-                        $.messager.alert("温馨提示", data.msg, "info", function () {
-                            //关闭对话框
-                            subjectDialog.dialog("close");
-                            //刷新数据表格
-                            subjectDatagrid.datagrid("load");
-                        });
-                    } else {
-                        $.messager.alert("温馨提示", data.msg, "info");
-                    }
-                }
-            })
+                 url: url,
+                 contentType: false,
+                 processData: false,
+                 success: function (data) {
+                     data = $.parseJSON(data);
+                     if (data.success) {
+                         $.messager.alert("温馨提示", data.msg, "info", function () {
+                             //关闭对话框
+                             subjectDialog.dialog("close");
+                             //刷新数据表格
+                             subjectDatagrid.datagrid("load");
+                         });
+                     } else {
+                         $.messager.alert("温馨提示", data.msg, "info");
+                     }
+                 }
+             })
         },
     };
     //给所有按钮绑定事件
@@ -153,6 +160,7 @@ $(function () {
                 {field: 'answer', align: 'center', title: '标准答案', width: 1},
                 {field: 'explain', align: 'center', title: '解释', width: 1},
                 {field: 'url', align: 'center', title: '图片地址', width: 1},
+                {field: 'mediaType', align: 'center', title: '媒体类型', width: 1,formatter: cmdObj.mediaTypeFormatr},
                 {field: 'addtime', align: 'center', title: '添加时间', width: 1},
             ]
         ]

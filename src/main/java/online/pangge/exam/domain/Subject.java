@@ -34,5 +34,9 @@ public class Subject extends BaseDomain{
     private String url;
     private Date addtime;
     private Admin adduser;
-
+    //媒体类型，如音频视频图片
+    private String mediaType;
+    public Subject(){
+        super();
+    }
 }
