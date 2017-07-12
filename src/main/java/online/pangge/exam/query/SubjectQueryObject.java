@@ -10,5 +10,8 @@ import lombok.Setter;
 @Setter
 public class SubjectQueryObject extends QueryObject {
     private String keyword;
-    private String subjectType;
+    private long subject_type_combobox=-1L;
+    private long classes_combobox=-1L;
+    private String media_type_combobox;
+    private String process_status_combobox;
 }

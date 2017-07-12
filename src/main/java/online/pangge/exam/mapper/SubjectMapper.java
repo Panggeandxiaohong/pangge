@@ -2,11 +2,12 @@ package online.pangge.exam.mapper;
 
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.query.SubjectQueryObject;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface SubjectMapper {
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(@Param("list") List<Long> id, @Param("process_status") String process_status);
 
     int insert(Subject record);
 

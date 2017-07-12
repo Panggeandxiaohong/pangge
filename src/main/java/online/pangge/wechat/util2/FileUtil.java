@@ -1,6 +1,8 @@
 package online.pangge.wechat.util2;
 
 import net.sf.json.JSONObject;
+import online.pangge.exam.util.ExamConst;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -13,30 +15,43 @@ import java.security.NoSuchProviderException;
  * Created by jie34 on 2017/4/22.
  */
 public class FileUtil {
+    private static Logger logger = Logger.getLogger(FileUtil.class);
+
     /**
      * 上传其他永久素材(图片素材的上限为5000，其他类型为1000)
      *
      * @return
      * @throws Exception
      */
+
+    public static String getPostfix(String path) {
+        if (path == null || ExamConst.EMPTY.equals(path.trim())) {
+            return ExamConst.EMPTY;
+        }
+        if (path.contains(ExamConst.POINT)) {
+            return path.substring(path.lastIndexOf(ExamConst.POINT) + 1, path.length());
+        }
+        return ExamConst.EMPTY;
+    }
+
     public static String addMaterialEver(String fileurl, String type, String token) {
         try {
-            System.out.println("fileurl="+fileurl);
-            System.out.println("type="+type);
-            System.out.println("token="+token);
+            System.out.println("fileurl=" + fileurl);
+            System.out.println("type=" + type);
+            System.out.println("token=" + token);
             File file = new File(fileurl);
             //上传素材
-            String path = "https://api.weixin.qq.com/cgi-bin/material/add_material?access_token=" + token + "&type=" + type;
+            String path = "http://file.api.weixin.qq.com/cgi-bin/media/upload?access_token=" + token + "&type=" + type;
+            logger.info("开始上传文件：" + file.getName());
             String result = connectHttpsByPost(path, null, file);
             result = result.replaceAll("[\\\\]", "");
-            System.out.println("result:" + result);
             JSONObject resultJSON = JSONObject.fromObject(result);
             if (resultJSON != null) {
                 if (resultJSON.get("media_id") != null) {
-                    System.out.println("上传" + type + "永久素材成功");
+                    logger.info("上传" + type + "永久素材成功");
                     return resultJSON.get("media_id").toString();
                 } else {
-                    System.out.println("上传" + type + "永久素材失败");
+                    logger.error("上传" + type + "永久素材失败");
                 }
             }
             return null;
@@ -52,7 +67,7 @@ public class FileUtil {
         return null;
     }
 
-    public static  String connectHttpsByPost(String path, String KK, File file) throws IOException, NoSuchAlgorithmException, NoSuchProviderException, KeyManagementException {
+    public static String connectHttpsByPost(String path, String KK, File file) throws IOException, NoSuchAlgorithmException, NoSuchProviderException, KeyManagementException {
         URL urlObj = new URL(path);
         //连接
         HttpURLConnection con = (HttpURLConnection) urlObj.openConnection();

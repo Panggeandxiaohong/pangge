@@ -7,8 +7,8 @@ import java.util.Date;
 
 public class WeixinUtil {
 
-	public static final String APPID = "wx59687be81dd3d388";
-	public static final String APPSECRET = "d4624c36b6795d1d99dcf0547af5443d";
+	public static final String APPID = "wx35a234c06d4fb604";
+	public static final String APPSECRET = "a2df696156bf5cb5bb670b1b3cc15cd7";
 	public static final String CREATE_MENU_URL = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
 	public static final String DELETE_MENU_URL = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN";
 	public static final String ACCESS_TOKEN_URL = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";

@@ -4,9 +4,7 @@ import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.util.OSSUtil;
 import online.pangge.exam.util.RedisUtil;
 import online.pangge.wechat.damain.XmlMessageEntity;
-import online.pangge.wechat.damain.message.resp.Article;
-import online.pangge.wechat.damain.message.resp.NewsMessage;
-import online.pangge.wechat.damain.message.resp.TextMessage;
+import online.pangge.wechat.damain.message.resp.*;
 import online.pangge.wechat.util.MessageUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +13,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import static online.pangge.wechat.util.MessageUtil.messageToXml;
 
 /**
  * 核心服务类,由此类去调用其它类
@@ -73,9 +69,10 @@ public class CoreService {
 						responseStr = "统计中。。。";
 					} else if (msg.contains("练习")) {
 						redisUtil.set("key", "exercise");
-//						String medai = FileUtil.addMaterialEver("/root/apache-tomcat-7.0.75/webapps/wechat/WEB-INF/classes/IMG.JPG","image", CommonUtil.getToken("wx35a234c06d4fb604","a2df696156bf5cb5bb670b1b3cc15cd7 ").getAccessToken());
+//						String media = FileUtil.addMaterialEver("/root/apache-tomcat-7.0.75/webapps/wechat/WEB-INF/classes/IMG_6572.JPG","image", CommonUtil.getToken("wx35a234c06d4fb604","a2df696156bf5cb5bb670b1b3cc15cd7 ").getAccessToken());
+//						System.out.println(media);
 //						Image i = new Image();
-//						i.setMediaId(medai);
+//						i.setMediaId(media);
 //						ImageMessage img = new ImageMessage();
 //						img.setImage(i);
 //						img.setCreateTime(new Date().getTime());
@@ -105,7 +102,20 @@ public class CoreService {
 			}
 			// 图片消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_IMAGE)) {
-				respContent = "您发送的是图片消息！";
+				MusicMessage music = new MusicMessage();
+				music.setCreateTime(new Date().getTime());
+				music.setFromUserName(toUserName);
+				music.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_MUSIC);
+				music.setToUserName(fromUserName);
+				Music m = new Music();
+				m.setHQMusicUrl("http://pangge.oss-cn-shenzhen.aliyuncs.com/111.mp3");
+				m.setMusicUrl("http://pangge.oss-cn-shenzhen.aliyuncs.com/111.mp3");
+				m.setDescription("ssss");
+				m.setTitle("hello");
+				music.setMusic(m);
+				respXml = MessageUtil.messageToXml(music);
+				return respXml;
+//				respContent = "您发送的是图片消息！";
 			}
 			// 语音消息
 			else if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_VOICE)) {

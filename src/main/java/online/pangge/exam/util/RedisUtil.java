@@ -3,6 +3,7 @@ package online.pangge.exam.util;
 import online.pangge.exam.domain.Classes;
 import online.pangge.exam.domain.Student;
 import online.pangge.exam.domain.Subject;
+import online.pangge.exam.domain.SubjectType;
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
@@ -137,7 +138,7 @@ public final class RedisUtil {
                     System.out.println("list = "+subject.getClass());
                     System.out.println("key = "+key + i);
                     hash.put(key + i, "question", subject.get(i).getQuestion());
-                    hash.put(key + i, "type", subject.get(i).getType());
+                    hash.put(key + i, "type", subject.get(i).getSubjectType());
                     hash.put(key + i, "score", subject.get(i).getScore());
                     hash.put(key + i, "classes", subject.get(i).getClasses());
                     hash.put(key + i, "A", subject.get(i).getAnswerA());
@@ -165,7 +166,6 @@ public final class RedisUtil {
             ListOperations<Serializable, Object> list = redisTemplate.opsForList();
             String subject = (String)list.leftPop(key);
             String quest = (String) hash.get(subject,"question");
-            String type = (String) hash.get(subject,"type");
             Double score = (Double) hash.get(subject,"score");
             Classes classes = (Classes) hash.get(subject,"classes");
             String A = (String) hash.get(subject,"A");
@@ -179,7 +179,8 @@ public final class RedisUtil {
             String url = (String) hash.get(subject,"url");
             Subject s = new Subject();
             s.setQuestion(quest);
-            s.setType(type);
+            SubjectType subjectType = (SubjectType) hash.get(subject,"subjectType");
+            s.setSubjectType(subjectType);
             s.setScore(score);
             s.setClasses(classes);
             s.setAnswerA(A);

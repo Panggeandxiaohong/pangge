@@ -13,7 +13,7 @@ public class Subject extends BaseDomain{
     //问题
     private String question;
     //类型
-    private String type;
+    private SubjectType subjectType;
     //分值
     private Double score;
     //班级
@@ -22,6 +22,7 @@ public class Subject extends BaseDomain{
     private String answerB;
     private String answerC;
     private String answerD;
+    private String processStatus;
     //标准答案
     private String answer;
     //用户答案
