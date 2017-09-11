@@ -12,7 +12,7 @@ import java.util.List;
  * Created by jie34 on 2017/6/11.
  */
 @Service
-public class IClassesServiceImpl implements IClassesService {
+public class ClassesServiceImpl implements IClassesService {
     @Autowired
     private ClassesMapper classesMapper;
 

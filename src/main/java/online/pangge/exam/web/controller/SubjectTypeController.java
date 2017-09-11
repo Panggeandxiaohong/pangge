@@ -16,7 +16,7 @@ import java.util.List;
 public class SubjectTypeController {
     @Autowired
     private ISubjectTypeService subjectTypeService;
-    @RequestMapping("/subject_type_list.do")
+    @RequestMapping("/type_list.do")
     @ResponseBody
     public List<SubjectType> getSubjectList(){
         return subjectTypeService.selectAll();

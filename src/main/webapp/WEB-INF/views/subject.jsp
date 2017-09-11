@@ -80,8 +80,8 @@
             <a id="subject_datagrid_delete" class="easyui-linkbutton" iconCls="icon-remove" plain="true" data-cmd="delete">删除</a>
             <a id="subject_datagrid_active" class="easyui-linkbutton" iconCls="icon-add" plain="true" data-cmd="active">激活</a>
             <a id="subject_datagrid_upload" class="easyui-linkbutton" iconCls="icon-upload" plain="true" data-cmd="upload">上传</a>
-            <a id="subject_datagrid_output" class="easyui-linkbutton" iconCls="icon-output" plain="true" data-cmd="output">导出</a>
-            <a id="subject_datagrid_download" class="easyui-linkbutton" iconCls="icon-download" plain="true" data-cmd="download">下载模板</a>
+            <a href="/subject/download_subject.do" class="easyui-linkbutton" iconCls="icon-output" plain="true">导出</a>
+            <a href="/subject/download_template.do" class="easyui-linkbutton" iconCls="icon-download" plain="true">下载模板</a>
             <a id="subject_datagrid_reload" class="easyui-linkbutton" iconCls="icon-reload" plain="true" data-cmd="reload">刷新</a>
         </div>
         <div>

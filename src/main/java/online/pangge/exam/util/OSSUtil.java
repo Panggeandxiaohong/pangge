@@ -22,10 +22,8 @@ public class OSSUtil {
     private int timeout;
     private OSSClient ossClient;
 
-    public OSSUtil() {
-    }
 
-    /**
+    /**;/l
      * OSS初始化
      */
     public void init() {

@@ -1,36 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="online.pangge.exam.mapper.SubjectMapper" >
-  <resultMap id="BaseResultMap" type="online.pangge.exam.domain.Subject" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="question" property="question" jdbcType="VARCHAR" />
-    <result column="A" property="answerA" jdbcType="VARCHAR" />
-    <result column="B" property="answerB" jdbcType="VARCHAR" />
-    <result column="C" property="answerC" jdbcType="VARCHAR" />
-    <result column="D" property="answerD" jdbcType="VARCHAR" />
-    <result column="mediaType" property="mediaType" jdbcType="VARCHAR" />
-    <result column="answer" property="answer" jdbcType="VARCHAR" />
-    <result column="subject_explain" property="explain" jdbcType="VARCHAR" />
-    <result column="addtime" property="addtime" jdbcType="TIMESTAMP" />
-    <result column="score" property="score" jdbcType="DOUBLE" />
-    <result column="userAnswer" property="userAnswer" jdbcType="VARCHAR" />
-    <result column="url" property="url" jdbcType="VARCHAR" />
-    <result column="process_status" property="processStatus" jdbcType="VARCHAR" />
-    <association property="subjectType" javaType="online.pangge.exam.domain.SubjectType" column="subject_type" select="online.pangge.exam.mapper.SubjectTypeMapper.selectByPrimaryKey"/>
-    <association property="classes" javaType="online.pangge.exam.domain.Classes" column="classes" select="online.pangge.exam.mapper.ClassesMapper.selectByPrimaryKey"/>
-    <association property="user" javaType="online.pangge.exam.domain.Student" column="userId" select="online.pangge.exam.mapper.StudentMapper.selectByPrimaryKey"/>
-    <association property="adduser" javaType="online.pangge.exam.domain.Student" column="adduser" select="online.pangge.exam.mapper.AdminMapper.selectByPrimaryKey"/>
-  </resultMap>
-  <update id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    update subject set process_status=#{process_status}
-    where id in
-    <foreach collection="list" item="subjectId" index="index"
-                         open="(" close=")" separator=",">
-    #{subjectId}
-  </foreach>
-  </update>
-  <insert id="insert" parameterType="online.pangge.exam.domain.Subject" useGeneratedKeys="true" keyProperty="id" >
-    insert into subject (question, A, B, 
+<mapper namespace="online.pangge.exam.mapper.SubjectMapper">
+    <resultMap id="BaseResultMap" type="online.pangge.exam.domain.Subject">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="question" property="question" jdbcType="VARCHAR"/>
+        <result column="A" property="answerA" jdbcType="VARCHAR"/>
+        <result column="B" property="answerB" jdbcType="VARCHAR"/>
+        <result column="C" property="answerC" jdbcType="VARCHAR"/>
+        <result column="D" property="answerD" jdbcType="VARCHAR"/>
+        <result column="mediaType" property="mediaType" jdbcType="VARCHAR"/>
+        <result column="answer" property="answer" jdbcType="VARCHAR"/>
+        <result column="subject_explain" property="explain" jdbcType="VARCHAR"/>
+        <result column="addtime" property="addtime" jdbcType="TIMESTAMP"/>
+        <result column="score" property="score" jdbcType="DOUBLE"/>
+        <result column="userAnswer" property="userAnswer" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="process_status" property="processStatus" jdbcType="VARCHAR"/>
+        <association property="subjectType" javaType="online.pangge.exam.domain.SubjectType" column="subject_type"
+                     select="online.pangge.exam.mapper.SubjectTypeMapper.selectByPrimaryKey"/>
+        <association property="classes" javaType="online.pangge.exam.domain.Classes" column="classes"
+                     select="online.pangge.exam.mapper.ClassesMapper.selectByPrimaryKey"/>
+        <association property="user" javaType="online.pangge.exam.domain.Student" column="userId"
+                     select="online.pangge.exam.mapper.StudentMapper.selectByPrimaryKey"/>
+        <association property="adduser" javaType="online.pangge.exam.domain.Student" column="adduser"
+                     select="online.pangge.exam.mapper.AdminMapper.selectByPrimaryKey"/>
+    </resultMap>
+    <update id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        update subject set process_status=#{process_status}
+        where id in
+        <foreach collection="list" item="subjectId" index="index"
+                 open="(" close=")" separator=",">
+            #{subjectId}
+        </foreach>
+    </update>
+    <insert id="insertSubjects" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+        <selectKey resultType="java.lang.Integer" keyProperty="id"
+                   order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into subject (question, A, B,
+        C, D, answer,subject_explain,subject_type, addtime,mediaType, adduser,score, classes, userAnswer,url,
+        userId,process_status)
+        values
+        <foreach collection="list" index="index" separator="," item="subject">
+            (#{subject.question,jdbcType=VARCHAR}, #{subject.answerA,jdbcType=VARCHAR},
+            #{subject.answerB,jdbcType=VARCHAR},
+            #{subject.answerC,jdbcType=VARCHAR}, #{subject.answerD,jdbcType=VARCHAR},
+            #{subject.answer,jdbcType=VARCHAR}, #{subject.explain,jdbcType=VARCHAR},
+            #{subject.subjectType.id}, #{subject.addtime,jdbcType=TIMESTAMP},#{subject.mediaType,jdbcType=VARCHAR},
+            #{subject.adduser.id,jdbcType=BIGINT},
+            #{subject.score,jdbcType=DOUBLE}, #{subject.classes.id}, #{subject.userAnswer,jdbcType=VARCHAR},
+            #{subject.url,jdbcType=VARCHAR}, #{subject.user.id,jdbcType=BIGINT}, #{subject.processStatus})
+        </foreach>
+    </insert>
+    <insert id="insert" parameterType="online.pangge.exam.domain.Subject" useGeneratedKeys="true" keyProperty="id">
+    insert into subject (question, A, B,
       C, D, answer,subject_explain,subject_type, addtime,mediaType, adduser,score, classes, userAnswer,url, userId,process_status)
     values (#{question,jdbcType=VARCHAR}, #{answerA,jdbcType=VARCHAR}, #{answerB,jdbcType=VARCHAR},
       #{answerC,jdbcType=VARCHAR}, #{answerD,jdbcType=VARCHAR}, #{answer,jdbcType=VARCHAR}, #{explain,jdbcType=VARCHAR},
@@ -38,70 +62,111 @@
       #{score,jdbcType=DOUBLE}, #{classes.id}, #{userAnswer,jdbcType=VARCHAR},
       #{url,jdbcType=VARCHAR}, #{user.id,jdbcType=BIGINT}, #{processStatus})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="online.pangge.exam.domain.Subject" >
-    update subject
-    set question = #{question,jdbcType=VARCHAR},
-      A = #{answerA,jdbcType=VARCHAR},
-      B = #{answerB,jdbcType=VARCHAR},
-      C = #{answerC,jdbcType=VARCHAR},
-      D = #{answerD,jdbcType=VARCHAR},
-      process_status = #{processStatus,jdbcType=VARCHAR},
-      answer = #{answer,jdbcType=VARCHAR},
-      explain = #{explain,jdbcType=VARCHAR},
-      subject_type = #{subjectType.id},
-      addtime = #{addtime,jdbcType=TIMESTAMP},
-      adduser = #{adduser.id,jdbcType=BIGINT},
-      score = #{score,jdbcType=DOUBLE},
-      classes = #{classes.id},
-      mediaType = #{mediaType,jdbcType=VARCHAR},
-      userAnswer = #{userAnswer,jdbcType=VARCHAR},
-      url = #{url,jdbcType=VARCHAR},
-      userId = #{user.id,jdbcType=BIGINT}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    <update id="updateByPrimaryKey">
+        update subject
+        set
+        <!-- <if test="subject.question!=null">
+             question = #{subject.question,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.answerA!=null">
+             A = #{subject.answerA,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.answerB!=null">
+             B = #{subject.answerB,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.answerC!=null">
+             C = #{subject.answerC,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.answerD!=null">
+             D = #{subject.answerD,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.processStatus!=null">
+             process_status = #{subject.processStatus,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.answer!=null">
+             answer = #{subject.answer,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.explain!=null">
+             explain = #{subject.explain,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.subjectType!=null">
+             subject_type = #{subject.subjectType.id},
+         </if>
+         <if test="subject.addtime!=null">
+             addtime = #{subject.addtime,jdbcType=TIMESTAMP},
+         </if>
+         <if test="subject.adduser!=null">
+             adduser = #{subject.adduser.id,jdbcType=BIGINT},
+         </if>
+         <if test="subject.score!=null">
+             score = #{subject.score,jdbcType=DOUBLE},
+         </if>
+         <if test="subject.classes!=null">
+             classes = #{subject.classes.id},
+         </if>
+         <if test="subject.mediaType!=null">
+             mediaType = #{subject.mediaType,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.userAnswer!=null">
+             userAnswer = #{subject.userAnswer,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.url!=null">
+             url = #{subject.url,jdbcType=VARCHAR},
+         </if>
+         <if test="subject.user!=null">
+             userId = #{subject.user.id,jdbcType=BIGINT}
+         </if>-->
+        <foreach collection="subject" item="con" index="key" separator="," >
+            ${key}=#{con}
+        </foreach>
+        where
+        <foreach collection="condition" item="con" index="key" separator="and" >
+            ${key}=#{con}
+        </foreach>
+    </update>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
     select id, question, A, B, C, D, answer, subject_explain,mediaType, subject_type, addtime, adduser, score,process_status,
     classes, userAnswer, url, userId,process_status
     from subject
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
+    <select id="selectAll" resultMap="BaseResultMap">
     select id, question, A, B, C, D, answer, subject_explain,mediaType, subject_type, addtime, adduser, score,process_status,
     classes, userAnswer, url, userId,process_status
     from subject
   </select>
-  <select id="queryCount" resultType="long">
-    select count(id) from subject
-    <include refid="where_sql"/>
-  </select>
-  <sql id="where_sql">
-    <where>
-      <if test="keyword!=null">
-        (
-        question LIKE concat("%",#{keyword},"%")
-        OR subject_explain LIKE concat("%",#{keyword},"%")
-        OR classes LIKE concat("%",#{keyword},"%")
-        )
-      </if>
-      <if test="subject_type_combobox!=-1">
-        and subject_type = #{subject_type_combobox}
-      </if>
-      <if test="classes_combobox!=-1">
-        and classes = #{classes_combobox}
-      </if>
-      <if test="media_type_combobox!=null">
-        and mediaType = #{media_type_combobox}
-      </if>
-      <if test="process_status_combobox!=null">
-        and process_status = #{process_status_combobox}
-      </if>
-    </where>
-  </sql>
-  <select id="queryList" resultMap="BaseResultMap">
-    select * from subject
-    <include refid="where_sql"/>
-    <if test="page!=null">
-      limit #{start},#{rows}
-    </if>
-  </select>
+    <select id="queryCount" resultType="long">
+        select count(id) from subject
+        <include refid="where_sql"/>
+    </select>
+    <sql id="where_sql">
+        <where>
+            <if test="keyword!=null">
+                (
+                question LIKE concat("%",#{keyword},"%")
+                OR subject_explain LIKE concat("%",#{keyword},"%")
+                OR classes LIKE concat("%",#{keyword},"%")
+                )
+            </if>
+            <if test="subject_type_combobox!=-1">
+                and subject_type = #{subject_type_combobox}
+            </if>
+            <if test="classes_combobox!=-1">
+                and classes = #{classes_combobox}
+            </if>
+            <if test="media_type_combobox!=null">
+                and mediaType = #{media_type_combobox}
+            </if>
+            <if test="process_status_combobox!=null">
+                and process_status = #{process_status_combobox}
+            </if>
+        </where>
+    </sql>
+    <select id="queryList" resultMap="BaseResultMap">
+        select * from subject
+        <include refid="where_sql"/>
+        <if test="page!=null">
+            limit #{start},#{rows}
+        </if>
+    </select>
 </mapper>

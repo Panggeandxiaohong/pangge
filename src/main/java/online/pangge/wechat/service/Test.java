@@ -2,13 +2,12 @@ package online.pangge.wechat.service;
 
 import com.google.gson.Gson;
 import online.pangge.exam.domain.Classes;
-import online.pangge.exam.domain.Student;
 import online.pangge.exam.domain.Subject;
-import online.pangge.exam.page.PageResult;
-import online.pangge.exam.query.SubjectQueryObject;
 import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.service.ISubjectService;
 import online.pangge.exam.util.RedisUtil;
+import org.apache.tools.zip.ZipEntry;
+import org.apache.tools.zip.ZipFile;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -17,6 +16,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.io.*;
 import java.util.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -29,22 +29,23 @@ public class Test {
 
     @Autowired
     private IStudentService studentService;
+
     public static void main(String[] args) {
         String aa = "未经过jedis";
         System.out.println(aa);
         JedisPoolConfig config = new JedisPoolConfig();
-        JedisPool pool = new JedisPool(config,"120.77.82.217",6379,1000,"XIAOlijun1314");
+        JedisPool pool = new JedisPool(config, "120.77.82.217", 6379, 1000, "XIAOlijun1314");
         Jedis js = pool.getResource();//new Jedis("120.77.82.217",6379);
-       js.auth("XIAOlijun1314");
-       js.select(1);
+        js.auth("XIAOlijun1314");
+        js.select(1);
         js.set("a", "{id:1,name:fffffff}");
-        aa= js.get("a");
+        aa = js.get("a");
         System.out.println("end");
         System.out.println(aa);
     }
 
     @org.junit.Test
-    public void jsontest(){
+    public void jsontest() {
         Subject s = new Subject();
         s.setAnswerA("A");
         s.setAnswerB("B");
@@ -56,66 +57,184 @@ public class Test {
         classes.setClassName("三年级二班");
         classes.setTeacher("李老师");
         s.setClasses(classes);
-        Map<String,Classes> map1 = new HashMap<>();
-        map1.put("sub",classes);
-        Map<String,Classes> map2 = new HashMap<>();
-        map2.put("sub",classes);
-        Map<String,Classes> map3 = new HashMap<>();
-        map3.put("sub",classes);
-        Map<String,Classes> map4 = new HashMap<>();
-        map4.put("sub",classes);
-        List<Map<String,Classes>> list = new ArrayList<>();
+        Map<String, Classes> map1 = new HashMap<>();
+        map1.put("sub", classes);
+        Map<String, Classes> map2 = new HashMap<>();
+        map2.put("sub", classes);
+        Map<String, Classes> map3 = new HashMap<>();
+        map3.put("sub", classes);
+        Map<String, Classes> map4 = new HashMap<>();
+        map4.put("sub", classes);
+        List<Map<String, Classes>> list = new ArrayList<>();
         list.add(map1);
         list.add(map2);
         list.add(map3);
         list.add(map4);
         Gson g = new Gson();
-        Map<String,Classes> mapp = g.fromJson(g.toJson(map4),Map.class);
+        Map<String, Classes> mapp = g.fromJson(g.toJson(map4), Map.class);
 
         String sss = g.toJson(list);
-        System.out.println("sss="+mapp.get("sub").getClassName());
+        System.out.println("sss=" + mapp.get("sub").getClassName());
     }
 
     @org.junit.Test
-    public void save(){
-/*        Student stu = new Student();
-        stu.setName("zhangsan");
-        stu.setId(1L);
-        Subject subject = new Subject();
-        subject.setType("choice");
-        subject.setQuestion("胖哥帅不帅");
-        subject.setAnswerA("帅");
-        subject.setAnswerB("A");
-        Classes c = new Classes();
-        c.setId(1L);
-        c.setClassName("社会管理学");
-        c.setClassroom("木有");
-        c.setTeacher("张老师");
-        c.setCreateDate(new Date());
-        c.setLastUpdateDate(new Date());
-        subject.setClasses(c);
-        subject.setAddtime(new Date());
-        Admin a = new Admin();
-        a.setName("张老师");
-        a.setId(1L);
-        subject.setAdduser(a);
-        subject.setAnswerC("非常帅");
-        subject.setAnswerD("ABC都有");
-        subject.setAnswer("D");
-        subject.setExplain("帅是不需要理由的");
-        subject.setUser(stu);
-        subject.setUserAnswer("D");
-        subjectService.insert(subject);*/
-        SubjectQueryObject qo = new SubjectQueryObject();
-        PageResult p = subjectService.page(qo);
-        System.out.println(p.getTotal());
-        List<Subject> list = p.getRows();
-        for (Subject s:
-             list) {
-            System.out.println(s.toString());
+    public void save() {
+        List<String[]> list = new ArrayList<>();
+        list.add(new String[]{"old", "0_start", "0_end"});
+        list.add(new String[]{"old", "1_start", "1_end"});
+        list.add(new String[]{"old", "2_start", "2_end"});
+        list.add(new String[]{"new", "3_start", "3_end"});
+        list.add(new String[]{"new", "4_start", "4_end"});
+        list.add(new String[]{"old", "5_start", "5_end"});
+        list.add(new String[]{"old", "6_start", "6_end"});
+        list.add(new String[]{"old", "7_start", "7_end"});
+        list.add(new String[]{"new", "8_start", "8_end"});
+        list.add(new String[]{"old", "9_start", "9_end"});
+        list.add(new String[]{"old", "10_start", "10_end"});
+        list.add(new String[]{"old", "11_start", "11_end"});
+        list.add(new String[]{"new", "12_start", "12_end"});
+        list.add(new String[]{"old", "13_start", "13_end"});
+        list.add(new String[]{"old", "14_start", "14_end"});
+        list.add(new String[]{"new", "15_start", "15_end"});
+        list.add(new String[]{"old", "16_start", "16_end"});
+        list.add(new String[]{"old", "17_start", "17_end"});
+        list.add(new String[]{"old", "18_start", "18_end"});
+        list.add(new String[]{"new", "19_start", "19_end"});
+        String oldString = "";
+        String newString = "";
+        String totalOldString = "old===";
+        String totalnewString = "new===";
+        for (int i = 0; i < list.size(); i++) {
+            if ("old".equals(list.get(i)[0])) {
+                if ("".equals(oldString)) {
+                    oldString = list.get(i)[1];
+                }
+                if (i - 1 >= 0) {
+                    if (i == (list.size() - 1)) {
+                        if ("new".equals(list.get(i)[0])) {
+                            if("old".equals(list.get(i-1)[0])){
+                                oldString += "-" + list.get(i-1)[2] + ",";
+                                totalOldString += oldString;
+                                oldString = "";
+                            }
+                            newString += "-" + list.get(i)[2] + ",";
+                            totalnewString += newString;
+                            newString = "";
+                        } else if ("old".equals(list.get(i)[0])) {
+                            if("new".equals(list.get(i-1)[0])){
+                                newString += "-" + list.get(i-1)[2] + ",";
+                                totalnewString += newString;
+                                newString = "";
+                            }
+                            oldString += "-" + list.get(i)[2] + ",";
+                            totalOldString += oldString;
+                            oldString = "";
+                        }
+                    } else {
+                        if ("new".equals(list.get(i - 1)[0])) {
+                            newString += "-" + list.get(i - 1)[2] + ",";
+                            totalnewString += newString;
+                            newString = "";
+                        }
+                    }
+                } else if ((list.size() - 1) == i) {
+                    oldString += "-" + list.get(i)[2];
+                    totalOldString += oldString;
+                }
+            } else {
+                if ("".equals(newString)) {
+                    newString = list.get(i)[1];
+                }
+                if (i - 1 >= 0) {
+                    if (i == (list.size() - 1)) {
+                        if ("old".equals(list.get(i)[0])) {
+                            if("new".equals(list.get(i-1)[0])){
+                                newString += "-" + list.get(i-1)[2] + ",";
+                                totalnewString += newString;
+                                newString = "";
+                            }
+                            oldString += "-" + list.get(i)[2] + ",";
+                            totalOldString += oldString;
+                            oldString = "";
+                        }else if("new".equals(list.get(i)[0])) {
+                            if("old".equals(list.get(i-1)[0])){
+                                oldString += "-" + list.get(i-1)[2] + ",";
+                                totalOldString += oldString;
+                                oldString = "";
+                            }
+                            newString += "-" + list.get(i)[2] + ",";
+                            totalnewString += newString;
+                            newString = "";
+                        }
+                    } else {
+                        if ("old".equals(list.get(i - 1)[0])) {
+                            oldString += "-" + list.get(i - 1)[2] + ",";
+                            totalOldString += oldString;
+                            oldString = "";
+                        }
+                    }
+                } else if ((list.size() - 1) == i) {
+                    newString += "-" + list.get(i)[2];
+                    totalnewString += newString;
+                }
+            }
         }
-        Student ss = studentService.selectByPrimaryKey(211L);
-            System.out.println(ss.toString());
-//        studentService.insert(stu);
+        System.out.println(totalOldString);
+        System.out.println(totalnewString);
+    }
+
+    @org.junit.Test
+    public void testUnZip() {
+        String srcPath = "G:\\mysql-5.7.11-winx64.zip";
+        String descPath = "G:\\test";
+        try {
+            File descFile = new File(descPath);
+            File srcFile = new File(srcPath);
+            if (!srcFile.exists() && (srcFile.length() <= 0)) {
+                throw new RuntimeException("the file is not exists");
+            }
+            ZipFile zipFile = new ZipFile(srcFile, "gbk");
+            String strPath, gbkPath, strTemp;
+            strPath = descPath;
+            Enumeration<ZipEntry> enumeration = zipFile.getEntries();
+            while (enumeration.hasMoreElements()) {
+                ZipEntry zipEnt = enumeration.nextElement();
+                gbkPath = zipEnt.getName();
+                strTemp = strPath + File.separator + gbkPath;
+                if (zipEnt.isDirectory()) {
+                    File dir = new File(strTemp);
+                    if (!dir.exists()) {
+                        dir.mkdirs();
+                    }
+                    continue;
+                } else {
+                    InputStream in = zipFile.getInputStream(zipEnt);
+                    BufferedInputStream bufferedInputStream = new BufferedInputStream(in);
+                    String strSubdir = gbkPath;
+                    for (int i = 0; i < strSubdir.length(); i++) {
+                        if (strSubdir.substring(i, i + 1).equalsIgnoreCase("/")) {
+                            String temp = strPath + File.separator + strSubdir.substring(0, i);
+                            File subDir = new File(temp);
+                            if (!subDir.exists()) {
+                                subDir.mkdir();
+                            }
+                        }
+                    }
+                    FileOutputStream out = new FileOutputStream(strTemp);
+                    BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(out);
+                    int len;
+                    byte[] buff = new byte[2014];
+                    while ((len = bufferedInputStream.read(buff)) != -1) {
+                        bufferedOutputStream.write(buff, 0, len);
+                    }
+                    bufferedOutputStream.close();
+                    bufferedInputStream.close();
+                }
+            }
+            zipFile.close();
+            System.out.println(srcFile.delete());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

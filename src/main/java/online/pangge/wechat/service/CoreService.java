@@ -108,8 +108,8 @@ public class CoreService {
 				music.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_MUSIC);
 				music.setToUserName(fromUserName);
 				Music m = new Music();
-				m.setHQMusicUrl("http://pangge.oss-cn-shenzhen.aliyuncs.com/111.mp3");
-				m.setMusicUrl("http://pangge.oss-cn-shenzhen.aliyuncs.com/111.mp3");
+				m.setHQMusicUrl("http://pangge.oss-cn-shenzhen.aliyuncs.com/who_is_this.mp3.mp3");
+				m.setMusicUrl("http://pangge.oss-cn-shenzhen.aliyuncs.com/who_is_this.mp3.mp3");
 				m.setDescription("ssss");
 				m.setTitle("hello");
 				music.setMusic(m);

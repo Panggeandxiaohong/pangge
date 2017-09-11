@@ -1,5 +1,6 @@
 package online.pangge.exam.service.impl;
 
+import online.pangge.exam.domain.Admin;
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.mapper.ClassesMapper;
 import online.pangge.exam.mapper.SubjectMapper;
@@ -8,6 +9,7 @@ import online.pangge.exam.page.PageResult;
 import online.pangge.exam.query.SubjectQueryObject;
 import online.pangge.exam.service.ISubjectService;
 import online.pangge.exam.util.ExamConst;
+import online.pangge.exam.util.FileUploadUtil;
 import online.pangge.wechat.util2.FileUtil;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -21,13 +23,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.aspectj.weaver.tools.cache.SimpleCacheFactory.path;
 
@@ -56,8 +54,8 @@ public class SubjectServiceImpl implements ISubjectService {
     }
 
     @Override
-    public int update(Subject subject) {
-        return subjectMapper.updateByPrimaryKey(subject);
+    public int update(Map subject, Map<String,Object> params) {
+        return subjectMapper.updateByPrimaryKey(subject,params);
     }
 
     @Override
@@ -80,29 +78,28 @@ public class SubjectServiceImpl implements ISubjectService {
     }
 
     @Override
-    public void importSubject(File subjects, File files) throws Exception {
-        List<Subject> subjectDatas = readExcel(subjects,FileUtil.getPostfix(subjects.getName()));
-        for (Subject s:subjectDatas
-             ) {
-            System.out.println(s.toString());
-        }
+    public void importSubject(MultipartFile subjects, MultipartFile files) throws IOException {
+        List<Subject> subjectDatas = null;
+        subjectDatas = readExcel(subjects, FileUtil.getPostfix(subjects.getOriginalFilename()));
+        subjectMapper.insertSubjects(subjectDatas);
+        FileUploadUtil.fileUpload(files);
     }
 
-    private List<Subject> readExcel(File file,String postfix) throws IOException {
-            if (!ExamConst.EMPTY.equals(postfix)) {
-                if (ExamConst.OFFICE_EXCEL_2003_POSTFIX.equals(postfix)) {
-                    return readXls(file);
-                } else if (ExamConst.OFFICE_EXCEL_2010_POSTFIX.equals(postfix)) {
-                    return readXlsx(file);
-                }
-            } else {
-                System.out.println(path + ExamConst.NOT_EXCEL_FILE);
+    private List<Subject> readExcel(MultipartFile file, String postfix) throws IOException {
+        if (!ExamConst.EMPTY.equals(postfix)) {
+            if (ExamConst.OFFICE_EXCEL_2003_POSTFIX.equals(postfix)) {
+                return readXls(file);
+            } else if (ExamConst.OFFICE_EXCEL_2010_POSTFIX.equals(postfix)) {
+                return readXlsx(file);
             }
+        } else {
+            System.out.println(path + ExamConst.NOT_EXCEL_FILE);
+        }
         return null;
     }
 
-    public List<Subject> readXlsx(File file) throws IOException {
-        InputStream is = new FileInputStream(file);
+    public List<Subject> readXlsx(MultipartFile file) throws IOException {
+        InputStream is = file.getInputStream();
         XSSFWorkbook xssfWorkbook = new XSSFWorkbook(is);
         Subject subject = null;
         List<Subject> list = new ArrayList<Subject>();
@@ -124,12 +121,16 @@ public class SubjectServiceImpl implements ISubjectService {
                     subject.setAnswerD(getValue(xssfRow.getCell(4)));
                     subject.setAnswer(getValue(xssfRow.getCell(5)));
                     subject.setExplain(getValue(xssfRow.getCell(6)));
-                    System.out.println(Long.valueOf(getValue(xssfRow.getCell(7))));
-                    subject.setSubjectType(subjectTypeMapper.selectByPrimaryKey(Long.valueOf(getValue(xssfRow.getCell(7)))));
+                    subject.setSubjectType(subjectTypeMapper.selectByPrimaryKey(Math.round((xssfRow.getCell(7).getNumericCellValue()))));
                     subject.setScore(Double.valueOf(getValue(xssfRow.getCell(8))));
-                    subject.setClasses(classesMapper.selectByPrimaryKey(Long.valueOf(getValue(xssfRow.getCell(9)))));
+                    subject.setClasses(classesMapper.selectByPrimaryKey(Math.round((xssfRow.getCell(9).getNumericCellValue()))));
                     subject.setUrl(getValue(xssfRow.getCell(10)));
                     subject.setMediaType(getValue(xssfRow.getCell(11)));
+                    subject.setProcessStatus(ExamConst.subject_process_status_inactive);
+                    subject.setAddtime(new Date());
+                    Admin admin = new Admin();
+                    admin.setId(1L);
+                    subject.setAdduser(admin);
                     list.add(subject);
                 }
             }
@@ -143,8 +144,8 @@ public class SubjectServiceImpl implements ISubjectService {
      * @return
      * @throws IOException
      */
-    public List<Subject> readXls(File file) throws IOException {
-        InputStream is = new FileInputStream(file);
+    public List<Subject> readXls(MultipartFile file) throws IOException {
+        InputStream is = file.getInputStream();
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook(is);
         Subject subject = null;
         List<Subject> list = new ArrayList<Subject>();
@@ -166,11 +167,12 @@ public class SubjectServiceImpl implements ISubjectService {
                     subject.setAnswerD(getValue(hssfRow.getCell(4)));
                     subject.setAnswer(getValue(hssfRow.getCell(5)));
                     subject.setExplain(getValue(hssfRow.getCell(6)));
-                    subject.setSubjectType(subjectTypeMapper.selectByPrimaryKey(Long.valueOf(getValue(hssfRow.getCell(7)))));
+                    subject.setSubjectType(subjectTypeMapper.selectByPrimaryKey(Math.round((hssfRow.getCell(7).getNumericCellValue()))));
                     subject.setScore(Double.valueOf(getValue(hssfRow.getCell(8))));
-                    subject.setClasses(classesMapper.selectByPrimaryKey(Long.valueOf(getValue(hssfRow.getCell(9)))));
+                    subject.setClasses(classesMapper.selectByPrimaryKey(Math.round((hssfRow.getCell(9).getNumericCellValue()))));
                     subject.setUrl(getValue(hssfRow.getCell(10)));
                     subject.setMediaType(getValue(hssfRow.getCell(11)));
+                    subject.setProcessStatus(ExamConst.subject_process_status_active);
                     list.add(subject);
                 }
             }
@@ -180,6 +182,9 @@ public class SubjectServiceImpl implements ISubjectService {
 
     @SuppressWarnings("static-access")
     private String getValue(XSSFCell xssfRow) {
+        if (xssfRow == null) {
+            return "";
+        }
         if (xssfRow.getCellType() == xssfRow.CELL_TYPE_NUMERIC) {
             return String.valueOf(xssfRow.getNumericCellValue());
         } else {
@@ -189,6 +194,9 @@ public class SubjectServiceImpl implements ISubjectService {
 
     @SuppressWarnings("static-access")
     private String getValue(HSSFCell hssfCell) {
+        if (hssfCell == null) {
+            return "";
+        }
         if (hssfCell.getCellType() == hssfCell.CELL_TYPE_NUMERIC) {
             return String.valueOf(hssfCell.getNumericCellValue());
         } else {

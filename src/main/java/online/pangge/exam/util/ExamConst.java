@@ -31,6 +31,7 @@ public class ExamConst {
     public static final String subject_process_status_active = "Active";
     public static final String subject_process_status_delete = "Deleted";
     public static final String subject_process_status_Offline = "Offline";
+    public static final String subject_process_status_inactive = "Inactive";
     public static List<String> images = new ArrayList<>();
 
     public static List<String> voices = new ArrayList<>();
