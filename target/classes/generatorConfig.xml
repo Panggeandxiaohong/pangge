@@ -81,7 +81,7 @@
 				value=""/> -->
 		</javaClientGenerator>
 
-		<table tableName="subject">
+		<table tableName="subject_type">
 			<!-- 参考 javaModelGenerator 的 constructorBased属性 -->
 			<property name="constructorBased" value="false" />
 			<generatedKey column="id" sqlStatement="JDBC" />

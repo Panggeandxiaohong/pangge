@@ -7,5 +7,6 @@
 		<setting name="lazyLoadingEnabled" value="true"/>
 		<setting name="aggressiveLazyLoading" value="false"/>
 		<setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode"/>
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
 	</settings>
 </configuration>
