@@ -1,515 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="add to github">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jxls_jxls_core_1_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_jexl_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_core_2_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_infrastructure_2_2_7_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_0_2_RELEASE.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/oss.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/redis.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/application-mvc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/application.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/generatorConfig.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/jdbc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/mybatis.cfg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/HelloOSS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Admin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/BaseDomain.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Classes.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Courses.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/ExamHistory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Permission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Role.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Student.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/domain/Subject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/AdminMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/AdminMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/ClassesMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/ClassesMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/CoursesMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/CoursesMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/ExamHistoryMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/ExamHistoryMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/MenuMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/MenuMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/PermissionMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/PermissionMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/RoleMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/RoleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/StudentMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/StudentMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/SubjectMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/mapper/SubjectMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/page/PageResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/query/PermissionQueryObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/query/QueryObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/query/RoleQueryObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/query/SubjectQueryObject.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/IMenuService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/IPermissionService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/IRoleService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/IStudentService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/ISubjectService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/impl/MenuServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/impl/PermissionServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/impl/RoleServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/impl/StudentServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/service/impl/SubjectServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/AjaxResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/CommonUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/ExamConst.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/MethodCacheInterceptor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/MethodCacheInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/MyInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/OSSUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/PermissionUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/RedisCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/RedisUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/RequiredPermission.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/SerializeUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/UserContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/util/ValidateUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/web/controller/IndexController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/exam/web/controller/UploadSubjectController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/XmlMessageEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/main/MenuManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/menu/Button.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/menu/ClickButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/menu/ComplexButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/menu/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/menu/ViewButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/event/BaseEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/event/LocationEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/event/MenuEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/event/QRCodeEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/event/SubscribeEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/BaseMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/ImageMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/LinkMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/LocationMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/TextMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/VideoMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/req/VoiceMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/Article.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/BaseMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/Image.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/ImageMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/Music.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/MusicMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/NewsMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/TextMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/Video.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/VideoMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/Voice.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/damain/message/resp/VoiceMessage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/pojo/Token.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/service/CoreService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/service/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/CommonUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/MenuUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/MessageUtil$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/MessageUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/MessageUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/MyX509TrustManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util/SignUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/BeanUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/FileUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/HttpUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/SecurityUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/SignUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/WeixinUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/XmlUtil$CollectionWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/util2/XmlUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/online/pangge/wechat/web/controller/WeixinController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/oss.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/rebel-remote.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/rebel.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/redis.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/classes/spring-jedis.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/aliyun-sdk-oss-2.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/asm-4.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/aspectjrt-1.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/aspectjweaver-1.7.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/cglib-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/cglib-nodep-3.2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-beanutils-1.8.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-codec-1.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-collections-3.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-fileupload-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-lang-2.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-lang3-3.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/commons-pool2-2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/druid-1.0.14.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/ezmorph-1.0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/fastjson-1.2.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/freemarker-2.3.20.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/hamcrest-core-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/httpclient-4.4.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/httpcore-4.4.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/httpmime-4.4.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jackson-annotations-2.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jackson-core-2.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jackson-databind-2.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jdom-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jedis-2.4.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/json-lib-2.4-jdk15.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jsonp-jaxrs-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/junit-4.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/jxl-2.6.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/lombok-1.16.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/mybatis-3.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/mybatis-spring-1.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/mysql-connector-java-5.1.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/poi-3.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/servlet-api-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/slf4j-api-1.7.25.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/slf4j-log4j12-1.7.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-aop-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-beans-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-context-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-context-support-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-core-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-data-redis-1.6.1.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-expression-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-jdbc-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-orm-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-test-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-tx-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-web-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/spring-webmvc-4.2.4.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/standard-1.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/xmlpull-1.1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/xpp3_min-1.1.4c.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/lib/xstream-1.4.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/tld/myFn.tld" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/views/common.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/views/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/views/subject.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/image/banner-pic.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/base.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/datagrid-detailview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/easyloader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/jquery.easyui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/locale/easyui-lang-zh_CN.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/combo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/combobox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/datagrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/datebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/easyui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/accordion_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/calendar_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/combo_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/datagrid_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/datebox_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/layout_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/linkbutton_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/menu_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/messager_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/pagination_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/panel_tools.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/searchbox_button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/slider_handle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/spinner_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/tabs_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/tree_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/images/validatebox_warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/linkbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/menu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/menubutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/messager.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/pagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/panel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/propertygrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/searchbox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/splitbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/tree.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/validatebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/black/window.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/combo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/combobox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/datagrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/datebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/easyui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/accordion_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/calendar_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/combo_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/datagrid_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/datebox_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/layout_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/linkbutton_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/menu_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/messager_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/pagination_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/panel_tools.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/searchbox_button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/slider_handle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/spinner_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/tabs_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/tree_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/images/validatebox_warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/linkbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/menu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/menubutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/messager.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/pagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/panel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/propertygrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/searchbox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/splitbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/tree.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/validatebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/bootstrap/window.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/combo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/combobox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/datagrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/datebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/easyui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/accordion_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/calendar_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/combo_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/datagrid_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/datebox_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/layout_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/linkbutton_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/menu_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/messager_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/pagination_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/panel_tools.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/searchbox_button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/slider_handle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/spinner_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/tabs_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/tree_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/images/validatebox_warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/linkbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/menu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/menubutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/messager.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/pagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/panel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/propertygrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/searchbox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/splitbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/tree.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/validatebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/default/window.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/combo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/combobox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/datagrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/datebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/easyui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/accordion_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/calendar_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/combo_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/datagrid_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/datebox_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/layout_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/linkbutton_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/menu_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/messager_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/pagination_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/panel_tools.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/searchbox_button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/slider_handle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/spinner_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/tabs_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/tree_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/images/validatebox_warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/linkbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/menu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/menubutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/messager.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/pagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/panel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/propertygrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/searchbox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/splitbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/tree.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/validatebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/gray/window.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icon.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/back.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/cut.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/download.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/download_moban.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/edit_add.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/edit_remove.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/filesave.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/help.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/mini_add.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/mini_edit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/mini_refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/no.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/ok.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/pencil.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/print.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/redo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/reload.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/sum.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/tip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/undo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/icons/upload.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/calendar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/combo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/combobox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/datagrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/datebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/easyui.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/accordion_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/calendar_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/combo_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/datagrid_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/datebox_arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/layout_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/linkbutton_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/menu_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/messager_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/pagination_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/panel_tools.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/searchbox_button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/slider_handle.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/spinner_arrows.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/tabs_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/tree_icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/images/validatebox_warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/layout.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/linkbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/menu.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/menubutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/messager.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/pagination.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/panel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/propertygrid.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/searchbox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/slider.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/splitbutton.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/tree.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/validatebox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/jquery-easyui/themes/metro/window.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/plugins/SWFObject License.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/plugins/swfupload.cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/plugins/swfupload.proxy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/plugins/swfupload.queue.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/plugins/swfupload.speed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/swfupload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/plugin/swfupload/swfupload.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/views/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/js/views/subject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/wechat/login.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/HelloOSS.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/HelloOSS.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/domain/Subject.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/domain/Subject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/mapper/SubjectMapper.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/mapper/SubjectMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/query/SubjectQueryObject.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/query/SubjectQueryObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/ISubjectService.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/ISubjectService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/impl/PermissionServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/impl/PermissionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/impl/RoleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/impl/RoleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/impl/SubjectServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/service/impl/SubjectServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/ExamConst.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/ExamConst.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/MethodCacheInterceptor$1.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/MethodCacheInterceptor$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/MethodCacheInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/MethodCacheInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/OSSUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/OSSUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/PermissionUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/PermissionUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/RedisUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/RedisUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/ValidateUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/util/ValidateUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/web/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/web/controller/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/web/controller/UploadSubjectController.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/web/controller/UploadSubjectController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/damain/main/MenuManager.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/damain/main/MenuManager.class" />
+    <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="" />
+    <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/service/CoreService.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/service/CoreService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/service/Test.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/service/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/CommonUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/CommonUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MenuUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MenuUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MessageUtil$1$1.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MessageUtil$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MessageUtil$1.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MessageUtil$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MessageUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util/MessageUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/BeanUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/BeanUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/FileUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/FileUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/HttpUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/HttpUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/SecurityUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/SecurityUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/WeixinUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/WeixinUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/XmlUtil.class" afterPath="$PROJECT_DIR$/target/classes/online/pangge/wechat/util2/XmlUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/wechat_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/wechat_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/application-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis.cfg.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/online/pangge/exam/mapper/SubjectMapper.xml" afterPath="$PROJECT_DIR$/target/classes/online/pangge/exam/mapper/SubjectMapper.xml" />
     </list>
     <ignored path="wechat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -547,7 +42,29 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2226">
               <caret line="116" column="18" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#4842#4843#0" expanded="false" />
+                <element signature="e#4880#4881#0" expanded="false" />
+                <element signature="e#4942#4943#0" expanded="false" />
+                <element signature="e#4996#4997#0" expanded="false" />
+                <element signature="e#5033#5034#0" expanded="false" />
+                <element signature="e#5066#5067#0" expanded="false" />
+                <element signature="e#5118#5119#0" expanded="false" />
+                <element signature="e#5162#5163#0" expanded="false" />
+                <element signature="e#5200#5201#0" expanded="false" />
+                <element signature="e#5234#5235#0" expanded="false" />
+                <element signature="e#5288#5289#0" expanded="false" />
+                <element signature="e#5334#5335#0" expanded="false" />
+                <element signature="e#5365#5366#0" expanded="false" />
+                <element signature="e#5395#5396#0" expanded="false" />
+                <element signature="e#5438#5439#0" expanded="false" />
+                <element signature="e#5476#5477#0" expanded="false" />
+                <element signature="e#5514#5515#0" expanded="false" />
+                <element signature="e#5548#5549#0" expanded="false" />
+                <element signature="e#5602#5603#0" expanded="false" />
+                <element signature="e#5648#5649#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -557,7 +74,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
               <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1593#1594#0" expanded="false" />
+                <element signature="e#1645#1646#0" expanded="false" />
+                <element signature="e#2003#2004#0" expanded="false" />
+                <element signature="e#2062#2063#0" expanded="false" />
+                <element signature="e#2116#2117#0" expanded="false" />
+                <element signature="e#2164#2165#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -567,7 +92,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
               <caret line="19" column="66" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="66" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -577,7 +104,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="609">
               <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#911#912#0" expanded="false" />
+                <element signature="e#971#972#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -587,7 +118,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -597,7 +130,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
               <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#370#371#0" expanded="false" />
+                <element signature="e#407#408#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -607,26 +144,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1512">
               <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1898#1899#0" expanded="false" />
+                <element signature="e#1930#1931#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ISubjectService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ISubjectService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/service/ISubjectService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
               <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2121">
-              <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
+            <state relative-caret-position="150">
+              <caret line="66" column="52" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -807,118 +350,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pangge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pangge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pangge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1763,6 +1198,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="" />
+      <changelist id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
       <created>1490800849395</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -1944,7 +1380,8 @@
       <workItem from="1505226093919" duration="598000" />
       <workItem from="1505475122169" duration="9000" />
       <workItem from="1505536608627" duration="174000" />
-      <workItem from="1505547211688" duration="923000" />
+      <workItem from="1505547211688" duration="1009000" />
+      <workItem from="1505558045376" duration="1898000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1496135687327</created>
@@ -1981,7 +1418,21 @@
       <option name="project" value="LOCAL" />
       <updated>1505142579667</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" remove file&#10;">
+      <created>1505549679024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1505549679024</updated>
+    </task>
+    <task id="LOCAL-00007" summary=" remove file&#10;">
+      <created>1505573815626</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1505573815626</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2017,7 +1468,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="639335000" />
+    <option name="totallyTimeSpent" value="641319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2030,7 +1481,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="0" width="1924" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2052,7 +1503,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21675977" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17060086" sideWeight="0.47916666" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17060086" sideWeight="0.47916666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18133047" sideWeight="0.5208333" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17542918" sideWeight="0.51580137" order="5" side_tool="true" content_ui="tabs" />
@@ -2101,7 +1552,9 @@
     <MESSAGE value="add subject" />
     <MESSAGE value="read xsl" />
     <MESSAGE value="add to github" />
-    <option name="LAST_COMMIT_MESSAGE" value="add to github" />
+    <MESSAGE value=" remove file&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value=" remove file&#10;" />
+    <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2365,7 +1818,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1593#1594#0" expanded="false" />
+            <element signature="e#1645#1646#0" expanded="false" />
+            <element signature="e#2003#2004#0" expanded="false" />
+            <element signature="e#2062#2063#0" expanded="false" />
+            <element signature="e#2116#2117#0" expanded="false" />
+            <element signature="e#2164#2165#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2373,7 +1834,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2381,7 +1846,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2389,7 +1856,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2226">
           <caret line="116" column="18" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4842#4843#0" expanded="false" />
+            <element signature="e#4880#4881#0" expanded="false" />
+            <element signature="e#4942#4943#0" expanded="false" />
+            <element signature="e#4996#4997#0" expanded="false" />
+            <element signature="e#5033#5034#0" expanded="false" />
+            <element signature="e#5066#5067#0" expanded="false" />
+            <element signature="e#5118#5119#0" expanded="false" />
+            <element signature="e#5162#5163#0" expanded="false" />
+            <element signature="e#5200#5201#0" expanded="false" />
+            <element signature="e#5234#5235#0" expanded="false" />
+            <element signature="e#5288#5289#0" expanded="false" />
+            <element signature="e#5334#5335#0" expanded="false" />
+            <element signature="e#5365#5366#0" expanded="false" />
+            <element signature="e#5395#5396#0" expanded="false" />
+            <element signature="e#5438#5439#0" expanded="false" />
+            <element signature="e#5476#5477#0" expanded="false" />
+            <element signature="e#5514#5515#0" expanded="false" />
+            <element signature="e#5548#5549#0" expanded="false" />
+            <element signature="e#5602#5603#0" expanded="false" />
+            <element signature="e#5648#5649#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2397,15 +1886,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="19" column="66" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2121">
-          <caret line="113" column="36" selection-start-line="113" selection-start-column="36" selection-end-line="113" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2434,7 +1917,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#370#371#0" expanded="false" />
+            <element signature="e#407#408#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2442,7 +1929,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="104" column="52" selection-start-line="104" selection-start-column="52" selection-end-line="104" selection-end-column="52" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1898#1899#0" expanded="false" />
+            <element signature="e#1930#1931#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2450,6 +1941,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="66" column="52" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
           <folding />
         </state>
       </provider>
