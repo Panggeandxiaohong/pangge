@@ -169,7 +169,8 @@ public final class RedisUtil {
             }
             System.out.println("subject number = "+get("subjectNumber"));
             Integer number = Integer.valueOf(get("subjectNumber").toString());
-            String subject = (String)list.leftPop(key+number);
+            String subject = list.leftPop(key+number).toString();
+            System.out.println("subject===="+subject);
             set("subjectNumber",number + 1);
             String quest = (String) hash.get(subject,"question");
             Double score = (Double) hash.get(subject,"score");
