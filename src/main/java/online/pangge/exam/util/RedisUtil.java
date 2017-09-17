@@ -164,9 +164,10 @@ public final class RedisUtil {
         public Subject getSubject(final String key){
             HashOperations<Serializable, String, Object> hash = redisTemplate.opsForHash();
             ListOperations<Serializable, Object> list = redisTemplate.opsForList();
-            if(get("number")==null){
+            if(get("subjectNumber")==null){
                 set("subjectNumber", 1);
             }
+            System.out.println("subject number = "+get("subjectNumber"));
             Integer number = (Integer) get("subjectNumber");
             String subject = (String)list.leftPop(key+number);
             set("subjectNumber",number + 1);
