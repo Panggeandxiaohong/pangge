@@ -97,7 +97,7 @@ public class CoreService {
 						}
 						System.out.println("begin read subject ...");
 						Subject s = redisUtil.getSubject("exercise");
-						System.out.println("ssss======"+s.getMediaType());
+						System.out.println("ssss======"+s);
 						if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							responseStr = "视频练习。。。";
 						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
