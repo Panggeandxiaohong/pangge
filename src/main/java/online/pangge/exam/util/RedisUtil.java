@@ -170,7 +170,7 @@ public final class RedisUtil {
             System.out.println("subject number = "+get("subjectNumber"));
             Integer number = Integer.valueOf(get("subjectNumber").toString());
             String kkk = key+number;
-            System.out.println(kkk);
+            System.out.println("kkk="+kkk);
             String subject = list.leftPop(kkk).toString();
             System.out.println("subject===="+subject);
             set("subjectNumber",number + 1);
