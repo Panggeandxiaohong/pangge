@@ -153,7 +153,7 @@ public final class RedisUtil {
                     hash.put(key + i, "mediaType", subject.get(i).getMediaType());
                     list.rightPush(key, key + i);
                     System.out.println("key==="+key+i);
-                    logger.info("insert subject = "+subject);
+                    logger.info("insert subject = "+subject.get(i));
                     result = true;
                 }
             } catch (Exception e) {
