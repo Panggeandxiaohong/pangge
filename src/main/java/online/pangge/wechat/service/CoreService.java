@@ -66,7 +66,7 @@ public class CoreService {
 						responseStr = "开始自测。。。";
 					} else if (msg.contains("统计")) {
 						redisUtil.set("key", "count");
-						responseStr = "开始统计。。。";
+						responseStr = "统计。。。";
 					} else if (msg.contains("练习")) {
 						redisUtil.set("key", "exercise");
 //						String media = FileUtil.addMaterialEver("/root/apache-tomcat-7.0.75/webapps/wechat/WEB-INF/classes/IMG_6572.JPG","image", CommonUtil.getToken("wx35a234c06d4fb604","a2df696156bf5cb5bb670b1b3cc15cd7 ").getAccessToken());
