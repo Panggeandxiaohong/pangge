@@ -167,7 +167,7 @@ public final class RedisUtil {
             if(get("number")==null){
                 set("subjectNumber", 1);
             }
-            Integer number = (int) get("subjectNumber");
+            Integer number = (Integer) get("subjectNumber");
             String subject = (String)list.leftPop(key+number);
             set("subjectNumber",number + 1);
             String quest = (String) hash.get(subject,"question");
