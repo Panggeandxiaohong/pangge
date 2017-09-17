@@ -1,6 +1,9 @@
 package online.pangge.wechat.service;
 
+import online.pangge.exam.domain.Subject;
 import online.pangge.exam.service.IStudentService;
+import online.pangge.exam.service.ISubjectService;
+import online.pangge.exam.util.ExamConst;
 import online.pangge.exam.util.OSSUtil;
 import online.pangge.exam.util.RedisUtil;
 import online.pangge.wechat.damain.XmlMessageEntity;
@@ -33,6 +36,8 @@ public class CoreService {
 	private OSSUtil ossUtil;
 	@Autowired
 	private IStudentService studentService;
+	@Autowired
+	private ISubjectService subjectService;
 	public String processRequest( XmlMessageEntity entity) {
 		// xml格式的消息数据
 		String respXml = null;
@@ -69,19 +74,9 @@ public class CoreService {
 						responseStr = "真正的开始统计。。。";
 					} else if (msg.contains("练习")) {
 						redisUtil.set("key", "exercise");
-//						String media = FileUtil.addMaterialEver("/root/apache-tomcat-7.0.75/webapps/wechat/WEB-INF/classes/IMG_6572.JPG","image", CommonUtil.getToken("wx35a234c06d4fb604","a2df696156bf5cb5bb670b1b3cc15cd7 ").getAccessToken());
-//						System.out.println(media);
-//						Image i = new Image();
-//						i.setMediaId(media);
-//						ImageMessage img = new ImageMessage();
-//						img.setImage(i);
-//						img.setCreateTime(new Date().getTime());
-//						img.setToUserName(fromUserName);
-//						img.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_IMAGE);
-//						img.setFromUserName(toUserName);
-//						return MessageUtil.messageToXml(img);
-//						String ossKey = ossUtil.uploadObj("/root/apache-tomcat-7.0.75/webapps/wechat/WEB-INF/classes","unitone.mp3",new File("/root/apache-tomcat-7.0.75/webapps/wechat/WEB-INF/classes/unitone.mp3"));
-						responseStr = "练习中。。。";
+						List<Subject> allSubject = subjectService.selectAll();
+						redisUtil.setSubject("exercise",allSubject);
+						responseStr = "开始练习。。。";
 					}else{
 						responseStr="请按套路出牌";
 					}
@@ -93,7 +88,28 @@ public class CoreService {
 					} else if ("count".equals(redisKey)) {
 						responseStr = "统计中。。。";
 					} else if ("exercise".equals(redisKey)) {
-						responseStr = "练习中。。。";
+						Subject s = redisUtil.getSubject("exercise");
+						if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
+							responseStr = "视频练习。。。";
+						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
+							MusicMessage music = new MusicMessage();
+							music.setCreateTime(new Date().getTime());
+							music.setFromUserName(toUserName);
+							music.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_MUSIC);
+							music.setToUserName(fromUserName);
+							Music m = new Music();
+							m.setHQMusicUrl(s.getUrl());
+							m.setMusicUrl(s.getUrl());
+							m.setDescription(s.getQuestion());
+							m.setTitle(s.getQuestion());
+							music.setMusic(m);
+							respXml = MessageUtil.messageToXml(music);
+							return respXml;
+						}else if(ExamConst.wechat_material_type_image.equals(s.getMediaType())){
+							responseStr = "图片练习。。。";
+						}else if(ExamConst.wechat_material_type_text.equals(s.getMediaType())){
+							responseStr = "文本练习。。。";
+						}
 					} else if ("exam".equals(redisKey)) {
 						responseStr = "考试中。。。";
 					}
