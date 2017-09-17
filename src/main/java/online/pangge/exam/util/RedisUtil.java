@@ -151,6 +151,7 @@ public final class RedisUtil {
                     hash.put(key + i, "explain", subject.get(i).getExplain());
                     hash.put(key + i, "url", subject.get(i).getUrl());
                     list.rightPush(key, key + i);
+                    System.out.println("key==="+key+i);
                     logger.info("insert subject = "+subject);
                     result = true;
                 }
