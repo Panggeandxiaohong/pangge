@@ -87,8 +87,9 @@ public class CoreService {
 					} else if ("count".equals(redisKey)) {
 						responseStr = "统计中。。。";
 					} else if ("exercise".equals(redisKey)) {
-						List<Subject> subjects = (List<Subject>) redisUtil.get("exercise");
-						responseStr = subjects.size() +"sssssss";
+//						List<Subject> subjects = (List<Subject>) redisUtil.get("exercise");
+						Object subjects = redisUtil.get("exercise");
+						responseStr = subjects.getClass() +"sssssss";
 						/*if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							responseStr = "视频练习。。。";
 						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
