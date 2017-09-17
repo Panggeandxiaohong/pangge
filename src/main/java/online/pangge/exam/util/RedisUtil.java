@@ -186,6 +186,7 @@ public final class RedisUtil {
             Student user = (Student) hash.get(subject,"user");
             String explain = (String) hash.get(subject,"explain");
             String url = (String) hash.get(subject,"url");
+            String mediaType = (String) hash.get(subject,"mediaType");
             Subject s = new Subject();
             s.setQuestion(quest);
             SubjectType subjectType = (SubjectType) hash.get(subject,"subjectType");
@@ -201,6 +202,7 @@ public final class RedisUtil {
             s.setUser(user);
             s.setExplain(explain);
             s.setUrl(url);
+            s.setMediaType(mediaType);
             return s;
         }
     public void setRedisTemplate(
