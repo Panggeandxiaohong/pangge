@@ -3,7 +3,6 @@ package online.pangge.wechat.service;
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.service.ISubjectService;
-import online.pangge.exam.util.ExamConst;
 import online.pangge.exam.util.OSSUtil;
 import online.pangge.exam.util.RedisUtil;
 import online.pangge.wechat.damain.XmlMessageEntity;
@@ -88,8 +87,9 @@ public class CoreService {
 					} else if ("count".equals(redisKey)) {
 						responseStr = "统计中。。。";
 					} else if ("exercise".equals(redisKey)) {
-						Subject s = redisUtil.getSubject("exercise");
-						if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
+						Boolean isSubjectexists = redisUtil.exists("exercise");
+						responseStr = isSubjectexists +"sssssss";
+						/*if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							responseStr = "视频练习。。。";
 						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							MusicMessage music = new MusicMessage();
@@ -109,7 +109,7 @@ public class CoreService {
 							responseStr = "图片练习。。。";
 						}else if(ExamConst.wechat_material_type_text.equals(s.getMediaType())){
 							responseStr = "文本练习。。。";
-						}
+						}*/
 					} else if ("exam".equals(redisKey)) {
 						responseStr = "考试中。。。";
 					}
