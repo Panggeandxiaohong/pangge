@@ -31,16 +31,31 @@ public class Test {
     private IStudentService studentService;
 
     public static void main(String[] args) {
-        String aa = "未经过jedis";
-        System.out.println(aa);
+        List<String> aa = new ArrayList<>();
+        aa.add("a");
+        aa.add("b");
+        aa.add("c");
+        aa.add("d");
+        aa.add("e");
         JedisPoolConfig config = new JedisPoolConfig();
-        JedisPool pool = new JedisPool(config, "120.77.82.217", 6379, 1000, "XIAOlijun1314");
+        JedisPool pool = new JedisPool(config, "39.108.2.41", 6379, 1000, "XIAOlijun1314");
         Jedis js = pool.getResource();//new Jedis("120.77.82.217",6379);
         js.auth("XIAOlijun1314");
         js.select(1);
-        js.set("a", "{id:1,name:fffffff}");
-        aa = js.get("a");
-        System.out.println("end");
+//        js.set("a", SerializeUtil.serialize(aa).toString());
+//        String a = js.get("a");
+//        Object aaa = SerializeUtil.unSerialize(js.get("a").getBytes());
+        js.rpush("sss","a");
+        js.rpush("sss","b");
+        js.rpush("sss","c");
+        js.rpush("sss","d");
+        js.rpush("sss","e");
+        for(int i= 0;i<10;i++){
+            System.out.println("i="+i+",has key = "+js.exists("sss"));
+           String s =  js.rpop("sss");
+            System.out.println("value = "+s);
+        }
+        System.out.println(js.get("a")+"end");
         System.out.println(aa);
     }
 

@@ -3,6 +3,7 @@ package online.pangge.wechat.service;
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.service.ISubjectService;
+import online.pangge.exam.util.ExamConst;
 import online.pangge.exam.util.OSSUtil;
 import online.pangge.exam.util.RedisUtil;
 import online.pangge.wechat.damain.XmlMessageEntity;
@@ -87,10 +88,15 @@ public class CoreService {
 					} else if ("count".equals(redisKey)) {
 						responseStr = "统计中。。。";
 					} else if ("exercise".equals(redisKey)) {
-//						List<Subject> subjects = (List<Subject>) redisUtil.get("exercise");
-						Object subjects = redisUtil.get("exercise");
-						responseStr = subjects.getClass() +"sssssss";
-						/*if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
+						if(!redisUtil.exists("exercise")){
+							respContent = "你的分数不及格！";
+							// 设置文本消息的内容
+							textMessage.setContent(respContent);
+							// 将文本消息对象转换成xml
+							respXml = MessageUtil.messageToXml(textMessage);
+						}
+						Subject s = redisUtil.getSubject("exercise");
+						if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							responseStr = "视频练习。。。";
 						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							MusicMessage music = new MusicMessage();
@@ -110,7 +116,7 @@ public class CoreService {
 							responseStr = "图片练习。。。";
 						}else if(ExamConst.wechat_material_type_text.equals(s.getMediaType())){
 							responseStr = "文本练习。。。";
-						}*/
+						}
 					} else if ("exam".equals(redisKey)) {
 						responseStr = "考试中。。。";
 					}
