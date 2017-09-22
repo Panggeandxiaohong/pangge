@@ -94,6 +94,7 @@ public class CoreService {
 							textMessage.setContent(respContent);
 							// 将文本消息对象转换成xml
 							respXml = MessageUtil.messageToXml(textMessage);
+							return respXml;
 						}
 						System.out.println("begin read subject ...");
 						Subject s = redisUtil.getSubject("exercise");
