@@ -1,6 +1,6 @@
 package online.pangge.exam.util;
 
-import net.sf.json.JSONObject;
+import com.google.gson.Gson;
 import online.pangge.exam.domain.Subject;
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.HashOperations;
@@ -135,7 +135,8 @@ public final class RedisUtil {
                     System.out.println("subject = "+subject.get(i).getClass());
                     System.out.println("list = "+subject.getClass());
                     System.out.println("key = "+key + i);
-                    list.rightPush(key, JSONObject.fromObject(subject.get(i)));
+                    Gson g = new Gson();
+                    list.rightPush(key, g.toJson(subject.get(i)));
                     System.out.println("key==="+key+i);
                     logger.info("insert subject = "+subject.get(i));
                     result = true;
@@ -159,7 +160,8 @@ public final class RedisUtil {
                 return null;
             }
             set("subjectNumber",number + 1);
-            Subject s = (Subject) JSONObject.toBean(JSONObject.fromObject(subjects.toString()),Subject.class);
+            Gson g = new Gson();
+            Subject s = g.fromJson(subjects.toString(),Subject.class);
             return s;
         }
     public void setRedisTemplate(
