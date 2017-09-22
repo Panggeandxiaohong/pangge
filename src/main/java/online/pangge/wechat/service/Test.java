@@ -10,6 +10,7 @@ import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipFile;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import redis.clients.jedis.Jedis;
@@ -17,7 +18,10 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:application-mvc.xml")
@@ -26,10 +30,9 @@ public class Test {
     private ISubjectService subjectService;
     @Autowired
     private RedisUtil redisUtil;
-
+    private RedisTemplate<Serializable, Object> redisTemplate;
     @Autowired
     private IStudentService studentService;
-
     public static void main(String[] args) {
         List<String> aa = new ArrayList<>();
         aa.add("a");
@@ -72,24 +75,13 @@ public class Test {
         classes.setClassName("三年级二班");
         classes.setTeacher("李老师");
         s.setClasses(classes);
-        Map<String, Classes> map1 = new HashMap<>();
-        map1.put("sub", classes);
-        Map<String, Classes> map2 = new HashMap<>();
-        map2.put("sub", classes);
-        Map<String, Classes> map3 = new HashMap<>();
-        map3.put("sub", classes);
-        Map<String, Classes> map4 = new HashMap<>();
-        map4.put("sub", classes);
-        List<Map<String, Classes>> list = new ArrayList<>();
-        list.add(map1);
-        list.add(map2);
-        list.add(map3);
-        list.add(map4);
         Gson g = new Gson();
-        Map<String, Classes> mapp = g.fromJson(g.toJson(map4), Map.class);
-
-        String sss = g.toJson(list);
-        System.out.println("sss=" + mapp.get("sub").getClassName());
+        String str = g.toJson(s);
+        redisUtil.set("ss",str);
+        System.out.println(str);
+        System.out.println(redisUtil.get("ss").toString());
+        Subject student = g.fromJson(redisUtil.get("ss").toString(), Subject.class);
+        System.out.println(student.getClasses().getClassName());
     }
 
     @org.junit.Test

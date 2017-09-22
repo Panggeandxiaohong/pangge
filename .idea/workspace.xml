@@ -4,6 +4,7 @@
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
     <ignored path="wechat.iws" />
@@ -89,8 +90,8 @@
       <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+            <state relative-caret-position="357">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -99,8 +100,18 @@
       <file leaf-file-name="RedisUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="163" column="97" selection-start-line="163" selection-start-column="97" selection-end-line="163" selection-end-column="97" />
+            <state relative-caret-position="335">
+              <caret line="161" column="9" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -182,8 +193,8 @@
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/job/unzipFileThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/job/uploadFileThread.java" />
         <option value="$PROJECT_DIR$/src/test/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
       </list>
     </option>
@@ -407,7 +418,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="util2" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,40 +453,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wechat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pangge" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -554,27 +531,7 @@
       <recent name="G:\ideaworkspace\wechat\src\main\java\com\qjj\exam\service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WeixinUtil">
-    <configuration default="false" name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="online.pangge.wechat.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="online.pangge.wechat.service.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="wechat" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.Test.jsontest">
     <configuration default="false" name="Test (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -653,6 +610,32 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="wechat" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test.jsontest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="online.pangge.wechat.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="wechat" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="online.pangge.wechat.service" />
+      <option name="MAIN_CLASS_NAME" value="online.pangge.wechat.service.Test" />
+      <option name="METHOD_NAME" value="jsontest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -1318,19 +1301,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.generate" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Test (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Test (3)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Test (4)" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Test (5)" />
-      <item index="6" class="java.lang.String" itemvalue="Application.WeixinUtil" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Test (3)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Test (4)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Test (5)" />
+      <item index="5" class="java.lang.String" itemvalue="Application.WeixinUtil" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.Test.jsontest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.WeixinUtil" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test (5)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Test (4)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test (3)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Test (2)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Test.jsontest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WeixinUtil" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test (5)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Test (4)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -1533,7 +1516,7 @@
       <workItem from="1505823754770" duration="1195000" />
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
-      <workItem from="1506086977321" duration="9467000" />
+      <workItem from="1506086977321" duration="11179000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1496135687327</created>
@@ -1843,30 +1826,37 @@
       <option name="project" value="LOCAL" />
       <updated>1506101191750</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="subject redis">
+      <created>1506101443503</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1506101443503</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_testupload - 2017.09.03 at 14h 49m 27s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 41m 33s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testupload - 2017.09.03 at 14h 50m 23s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 42m 49s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testupload - 2017.09.03 at 20h 17m 53s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 45m 33s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testupload - 2017.09.03 at 22h 45m 51s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 47m 43s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testupload - 2017.09.03 at 22h 50m 11s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 49m 20s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testupload - 2017.09.03 at 22h 52m 02s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 53m 07s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_testupload - 2017.09.03 at 22h 54m 22s.xml">
-      <configuration name="test.testupload" configurationId="JUnit" />
+    <history-entry file="Test_jsontest - 2017.09.23 at 01h 56m 24s.xml">
+      <configuration name="Test.jsontest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="test_testupload - 2017.09.03 at 23h 00m 12s.xml">
       <configuration name="test.testupload" configurationId="JUnit" />
@@ -1879,7 +1869,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="676837000" />
+    <option name="totallyTimeSpent" value="678549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1911,7 +1901,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21106094" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26815644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28268155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21675977" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2335,14 +2325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar!/com/google/gson/Gson.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -2359,14 +2341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/data/spring-data-redis/1.6.1.RELEASE/spring-data-redis-1.6.1.RELEASE.jar!/org/springframework/data/redis/core/ListOperations.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -2375,10 +2349,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="82" column="58" selection-start-line="82" selection-start-column="58" selection-end-line="82" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="163" column="97" selection-start-line="163" selection-start-column="97" selection-end-line="163" selection-end-column="97" />
+        <state relative-caret-position="335">
+          <caret line="161" column="9" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
           <folding />
         </state>
       </provider>

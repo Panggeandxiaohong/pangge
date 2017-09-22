@@ -150,16 +150,11 @@ public final class RedisUtil {
 
         public Subject getSubject(final String key){
             ListOperations<Serializable, Object> list = redisTemplate.opsForList();
-            if(get("subjectNumber")==null){
-                set("subjectNumber", 1);
-            }
-            System.out.println("subject number = "+get("subjectNumber"));
             Integer number = Integer.valueOf(get("subjectNumber").toString());
             String subjects = list.leftPop(key).toString();
             if(subjects==null){
                 return null;
             }
-            set("subjectNumber",number + 1);
             Gson g = new Gson();
             System.out.println("####################################"+subjects+"#################");
             Subject s = g.fromJson(subjects,Subject.class);
