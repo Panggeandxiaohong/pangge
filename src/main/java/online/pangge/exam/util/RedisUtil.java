@@ -136,6 +136,7 @@ public final class RedisUtil {
                     System.out.println("list = "+subject.getClass());
                     System.out.println("key = "+key + i);
                     Gson g = new Gson();
+                    System.out.println("###############################"+subject.get(i));
                     list.rightPush(key, g.toJson(subject.get(i)));
                     System.out.println("key==="+key+i);
                     logger.info("insert subject = "+subject.get(i));

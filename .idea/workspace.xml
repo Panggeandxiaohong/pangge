@@ -4,7 +4,6 @@
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
     <ignored path="wechat.iws" />
@@ -100,8 +99,8 @@
       <file leaf-file-name="RedisUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="161" column="9" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
+            <state relative-caret-position="419">
+              <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -1516,7 +1515,7 @@
       <workItem from="1505823754770" duration="1195000" />
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
-      <workItem from="1506086977321" duration="11179000" />
+      <workItem from="1506086977321" duration="11475000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1496135687327</created>
@@ -1833,7 +1832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506101443503</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="subject redis">
+      <created>1506103096365</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1506103096365</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1869,7 +1875,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="678549000" />
+    <option name="totallyTimeSpent" value="678845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1901,7 +1907,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21106094" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28268155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28268155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21675977" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -2367,8 +2373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="161" column="9" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
+        <state relative-caret-position="419">
+          <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
           <folding />
         </state>
       </provider>
