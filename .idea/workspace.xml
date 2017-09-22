@@ -99,8 +99,8 @@
       <file leaf-file-name="RedisUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="163" column="55" selection-start-line="163" selection-start-column="55" selection-end-line="163" selection-end-column="55" />
+            <state relative-caret-position="495">
+              <caret line="163" column="50" selection-start-line="163" selection-start-column="50" selection-end-line="163" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -1559,7 +1559,7 @@
       <workItem from="1505823754770" duration="1195000" />
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
-      <workItem from="1506086977321" duration="8088000" />
+      <workItem from="1506086977321" duration="8564000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1496135687327</created>
@@ -1841,7 +1841,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506098463840</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="subject redis">
+      <created>1506099995261</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1506099995261</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1877,7 +1884,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="675458000" />
+    <option name="totallyTimeSpent" value="675934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2373,8 +2380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="163" column="55" selection-start-line="163" selection-start-column="55" selection-end-line="163" selection-end-column="55" />
+        <state relative-caret-position="495">
+          <caret line="163" column="50" selection-start-line="163" selection-start-column="50" selection-end-line="163" selection-end-column="50" />
           <folding />
         </state>
       </provider>
