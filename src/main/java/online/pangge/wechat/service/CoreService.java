@@ -75,7 +75,7 @@ public class CoreService {
 					} else if (msg.contains("练习")) {
 						redisUtil.set("key", "exercise");
 						List<Subject> allSubject = subjectService.selectAll();
-						redisUtil.setSubject("exercise",allSubject);
+						redisUtil.setSubject("exerciseSubject",allSubject);
 						responseStr = "开始练习。。。";
 					}else{
 						responseStr="请按套路出牌";
@@ -88,7 +88,7 @@ public class CoreService {
 					} else if ("count".equals(redisKey)) {
 						responseStr = "统计中。。。";
 					} else if ("exercise".equals(redisKey)) {
-						if(!redisUtil.exists("exercise")){
+						if(!redisUtil.exists("exerciseSubject")){
 							redisUtil.remove("key");
 							respContent = "你的分数不及格！";
 							// 设置文本消息的内容
@@ -97,7 +97,7 @@ public class CoreService {
 							respXml = MessageUtil.messageToXml(textMessage);
 							return respXml;
 						}
-						Subject s = redisUtil.getSubject("exercise");
+						Subject s = redisUtil.getSubject("exerciseSubject");
 						if(ExamConst.wechat_material_type_video.equals(s.getMediaType())){
 							Article article = new Article();
 							article.setTitle("开源中国");

@@ -1,7 +1,5 @@
 package online.pangge.wechat.service;
 
-import com.google.gson.Gson;
-import online.pangge.exam.domain.Classes;
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.service.ISubjectService;
@@ -19,7 +17,6 @@ import redis.clients.jedis.JedisPoolConfig;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
 
@@ -64,24 +61,10 @@ public class Test {
 
     @org.junit.Test
     public void jsontest() {
-        Subject s = new Subject();
-        s.setAnswerA("A");
-        s.setAnswerB("B");
-        s.setAnswerC("C");
-        s.setAnswerD("D");
-        s.setQuestion("question");
-        Classes classes = new Classes();
-        classes.setCreateDate(new Date());
-        classes.setClassName("三年级二班");
-        classes.setTeacher("李老师");
-        s.setClasses(classes);
-        Gson g = new Gson();
-        String str = g.toJson(s);
-        redisUtil.set("ss",str);
-        System.out.println(str);
-        System.out.println(redisUtil.get("ss").toString());
-        Subject student = g.fromJson(redisUtil.get("ss").toString(), Subject.class);
-        System.out.println(student.getClasses().getClassName());
+        List<Subject> list = subjectService.selectAll();
+        redisUtil.setSubject("s",list);
+        Subject s = redisUtil.getSubject("s");
+        System.out.println(s.getQuestion());
     }
 
     @org.junit.Test
