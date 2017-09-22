@@ -161,7 +161,7 @@ public final class RedisUtil {
             }
             set("subjectNumber",number + 1);
             Gson g = new Gson();
-            System.out.println(subjects.toString());
+            System.out.println("####################################"+subjects.toString());
             Subject s = g.fromJson(subjects.toString(),Subject.class);
             return s;
         }
