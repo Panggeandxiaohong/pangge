@@ -155,13 +155,13 @@ public final class RedisUtil {
             }
             System.out.println("subject number = "+get("subjectNumber"));
             Integer number = Integer.valueOf(get("subjectNumber").toString());
-            String subjects = (String) list.leftPop(key);
+            String subjects = list.leftPop(key).toString();
             if(subjects==null){
                 return null;
             }
             set("subjectNumber",number + 1);
             Gson g = new Gson();
-            System.out.println("####################################"+subjects);
+            System.out.println("####################################"+subjects+"#################");
             Subject s = g.fromJson(subjects,Subject.class);
             return s;
         }
