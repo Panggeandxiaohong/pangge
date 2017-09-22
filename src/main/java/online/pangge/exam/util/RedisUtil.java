@@ -2,7 +2,6 @@ package online.pangge.exam.util;
 
 import net.sf.json.JSONObject;
 import online.pangge.exam.domain.Subject;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
@@ -155,12 +154,12 @@ public final class RedisUtil {
             }
             System.out.println("subject number = "+get("subjectNumber"));
             Integer number = Integer.valueOf(get("subjectNumber").toString());
-            String subject = list.leftPop(key).toString();
-            if(StringUtils.isEmpty(subject)){
+            Object subjects = list.leftPop(key);
+            if(subjects==null){
                 return null;
             }
             set("subjectNumber",number + 1);
-            Subject s = (Subject) JSONObject.toBean(JSONObject.fromObject(subject),Subject.class);
+            Subject s = (Subject) JSONObject.toBean(JSONObject.fromObject(subjects.toString()),Subject.class);
             return s;
         }
     public void setRedisTemplate(
