@@ -2,6 +2,7 @@ package online.pangge.exam.util;
 
 import net.sf.json.JSONObject;
 import online.pangge.exam.domain.Subject;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
@@ -135,20 +136,6 @@ public final class RedisUtil {
                     System.out.println("subject = "+subject.get(i).getClass());
                     System.out.println("list = "+subject.getClass());
                     System.out.println("key = "+key + i);
-//                    hash.put(key + i, "question", subject.get(i).getQuestion());
-//                    hash.put(key + i, "type", subject.get(i).getSubjectType());
-//                    hash.put(key + i, "score", subject.get(i).getScore());
-//                    hash.put(key + i, "classes", subject.get(i).getClasses());
-//                    hash.put(key + i, "A", subject.get(i).getAnswerA());
-//                    hash.put(key + i, "B", subject.get(i).getAnswerB());
-//                    hash.put(key + i, "C", subject.get(i).getAnswerC());
-//                    hash.put(key + i, "D", subject.get(i).getAnswerD());
-//                    hash.put(key + i, "answer", subject.get(i).getAnswer());
-//                    hash.put(key + i, "userAnswer", subject.get(i).getUserAnswer());
-//                    hash.put(key + i, "user", subject.get(i).getUser());
-//                    hash.put(key + i, "explain", subject.get(i).getExplain());
-//                    hash.put(key + i, "url", subject.get(i).getUrl());
-//                    hash.put(key + i, "mediaType", subject.get(i).getMediaType());
                     list.rightPush(key, JSONObject.fromObject(subject));
                     System.out.println("key==="+key+i);
                     logger.info("insert subject = "+subject.get(i));
@@ -162,7 +149,6 @@ public final class RedisUtil {
         }
 
         public Subject getSubject(final String key){
-//            HashOperations<Serializable, String, Object> hash = redisTemplate.opsForHash();
             ListOperations<Serializable, Object> list = redisTemplate.opsForList();
             if(get("subjectNumber")==null){
                 set("subjectNumber", 1);
@@ -170,37 +156,10 @@ public final class RedisUtil {
             System.out.println("subject number = "+get("subjectNumber"));
             Integer number = Integer.valueOf(get("subjectNumber").toString());
             String subject = list.leftPop(key).toString();
-//            System.out.println("subject===="+subject);
+            if(StringUtils.isEmpty(subject)){
+                return null;
+            }
             set("subjectNumber",number + 1);
-//            String quest = (String) hash.get(subject,"question");
-//            Double score = (Double) hash.get(subject,"score");
-//            Classes classes = (Classes) hash.get(subject,"classes");
-//            String A = (String) hash.get(subject,"A");
-//            String B = (String) hash.get(subject,"B");
-//            String C = (String) hash.get(subject,"C");
-//            String D = (String) hash.get(subject,"D");
-//            String answer = (String) hash.get(subject,"answer");
-//            String userAnswer = (String) hash.get(subject,"userAnswer");
-//            Student user = (Student) hash.get(subject,"user");
-//            String explain = (String) hash.get(subject,"explain");
-//            String url = (String) hash.get(subject,"url");
-//            String mediaType = (String) hash.get(subject,"mediaType");
-//            Subject s = new Subject();
-//            s.setQuestion(quest);
-//            SubjectType subjectType = (SubjectType) hash.get(subject,"subjectType");
-//            s.setSubjectType(subjectType);
-//            s.setScore(score);
-//            s.setClasses(classes);
-//            s.setAnswerA(A);
-//            s.setAnswerB(B);
-//            s.setAnswerC(C);
-//            s.setAnswerD(D);
-//            s.setAnswer(answer);
-//            s.setUserAnswer(userAnswer);
-//            s.setUser(user);
-//            s.setExplain(explain);
-//            s.setUrl(url);
-//            s.setMediaType(mediaType);
             Subject s = (Subject) JSONObject.toBean(JSONObject.fromObject(subject),Subject.class);
             return s;
         }
