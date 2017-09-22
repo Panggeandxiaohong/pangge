@@ -135,7 +135,7 @@ public final class RedisUtil {
                     System.out.println("subject = "+subject.get(i).getClass());
                     System.out.println("list = "+subject.getClass());
                     System.out.println("key = "+key + i);
-                    list.rightPush(key, JSONObject.fromObject(subject));
+                    list.rightPush(key, JSONObject.fromObject(subject.get(i)));
                     System.out.println("key==="+key+i);
                     logger.info("insert subject = "+subject.get(i));
                     result = true;

@@ -4,7 +4,6 @@
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
     <ignored path="wechat.iws" />
@@ -106,8 +105,8 @@
       <file leaf-file-name="RedisUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="161" column="93" selection-start-line="161" selection-start-column="93" selection-end-line="161" selection-end-column="93" />
+            <state relative-caret-position="483">
+              <caret line="137" column="77" selection-start-line="137" selection-start-column="77" selection-end-line="137" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -1526,7 +1525,7 @@
       <workItem from="1505823754770" duration="1195000" />
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
-      <workItem from="1506086977321" duration="2771000" />
+      <workItem from="1506086977321" duration="2931000" />
     </task>
     <task id="LOCAL-00001" summary="upload project">
       <created>1496135687327</created>
@@ -1780,7 +1779,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506089594129</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="subject redis">
+      <created>1506090081195</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1506090081195</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1816,7 +1822,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="670141000" />
+    <option name="totallyTimeSpent" value="670301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2278,8 +2284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="161" column="93" selection-start-line="161" selection-start-column="93" selection-end-line="161" selection-end-column="93" />
+        <state relative-caret-position="483">
+          <caret line="137" column="77" selection-start-line="137" selection-start-column="77" selection-end-line="137" selection-end-column="77" />
           <folding />
         </state>
       </provider>
