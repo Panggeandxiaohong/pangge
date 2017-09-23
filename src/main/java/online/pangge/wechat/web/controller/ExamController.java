@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ExamController {
     @RequestMapping("/exam.do")
     public String exam(String src,String type, Model model){
+        System.out.println("src = "+src);
+        System.out.println("type = "+type);
         model.addAttribute("src",src);
         model.addAttribute("type",type);
         return "wechat/subjectView";
