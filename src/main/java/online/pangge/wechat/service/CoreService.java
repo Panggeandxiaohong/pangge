@@ -100,10 +100,10 @@ public class CoreService {
 						Subject s = redisUtil.getSubject(fromUserName);
 						if(ExamConst.wechat_material_type_video.equals(s.getMediaType())){
 							Article article = new Article();
-							article.setTitle("开源中国");
-							article.setDescription("开源中国社区成立于2008年8月，是目前中国最大的开源技术社区。\n\n开源中国的目的是为中国的IT技术人员提供一个全面的、快捷更新的用来检索开源软件以及交流开源经验的平台。\n\n经过不断的改进,目前开源中国社区已经形成了由开源软件库、代码分享、资讯、讨论区和博客等几大频道内容。");
+							article.setTitle(s.getQuestion());
+							article.setDescription(s.getQuestion());
 							article.setPicUrl("");
-							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+ExamConst.wechat_material_type_video);
+							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+s.getMediaType());
 							List<Article> articleList = new ArrayList<Article>();
 							articleList.add(article);
 							// 创建图文消息
@@ -118,10 +118,10 @@ public class CoreService {
 							return respXml;
 						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
 							Article article = new Article();
-							article.setTitle("开源中国");
-							article.setDescription("开源中国社区成立于2008年8月，是目前中国最大的开源技术社区。\n\n开源中国的目的是为中国的IT技术人员提供一个全面的、快捷更新的用来检索开源软件以及交流开源经验的平台。\n\n经过不断的改进,目前开源中国社区已经形成了由开源软件库、代码分享、资讯、讨论区和博客等几大频道内容。");
+							article.setTitle(s.getQuestion());
+							article.setDescription(s.getQuestion());
 							article.setPicUrl("");
-							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+ExamConst.wechat_material_type_voice);
+							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+s.getMediaType());
 							List<Article> articleList = new ArrayList<Article>();
 							articleList.add(article);
 							// 创建图文消息
