@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
     <ignored path="wechat.iws" />
@@ -35,35 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ExamConst.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/ExamConst.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="19" column="57" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISubjectService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ISubjectService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/service/ISubjectService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
               <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="123" column="133" selection-start-line="123" selection-start-column="133" selection-end-line="123" selection-end-column="133" />
+            <state relative-caret-position="364">
+              <caret line="118" column="61" selection-start-line="118" selection-start-column="61" selection-end-line="118" selection-end-column="61" />
               <folding>
                 <element signature="e#4695#4704#0" expanded="true" />
               </folding>
@@ -74,8 +59,8 @@
       <file leaf-file-name="ExamController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,9 +176,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wechat/subjectView.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/WeixinController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
       </list>
     </option>
   </component>
@@ -1574,14 +1559,7 @@
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
-      <workItem from="1506134748336" duration="10780000" />
-    </task>
-    <task id="LOCAL-00007" summary=" remove file&#10;">
-      <created>1505573815626</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1505573815626</updated>
+      <workItem from="1506134748336" duration="11027000" />
     </task>
     <task id="LOCAL-00008" summary="test featch --all">
       <created>1505610704536</created>
@@ -1919,7 +1897,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506150525013</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="subject redis">
+      <created>1506167053801</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1506167053801</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1955,7 +1940,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="691077000" />
+    <option name="totallyTimeSpent" value="691324000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2261,26 +2246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/service/ISubjectService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/ExamConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="57" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/HelloOSS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1239">
@@ -2437,8 +2402,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2455,11 +2420,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="123" column="133" selection-start-line="123" selection-start-column="133" selection-end-line="123" selection-end-column="133" />
+        <state relative-caret-position="364">
+          <caret line="118" column="61" selection-start-line="118" selection-start-column="61" selection-end-line="118" selection-end-column="61" />
           <folding>
             <element signature="e#4695#4704#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/ExamConst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/service/ISubjectService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
