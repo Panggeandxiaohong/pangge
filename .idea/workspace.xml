@@ -71,8 +71,8 @@
       <file leaf-file-name="subjectView.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="0" selection-end-line="23" selection-end-column="11" />
+            <state relative-caret-position="441">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -1570,14 +1570,7 @@
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
-      <workItem from="1506134748336" duration="12769000" />
-    </task>
-    <task id="LOCAL-00012" summary="add media type">
-      <created>1505630469311</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1505630469311</updated>
+      <workItem from="1506134748336" duration="13001000" />
     </task>
     <task id="LOCAL-00013" summary="add media type">
       <created>1505631191418</created>
@@ -1915,7 +1908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506168639761</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="subject redis">
+      <created>1506169039521</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1506169039521</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1951,7 +1951,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="693066000" />
+    <option name="totallyTimeSpent" value="693298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2449,8 +2449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="0" selection-end-line="23" selection-end-column="11" />
+        <state relative-caret-position="441">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding />
         </state>
       </provider>
