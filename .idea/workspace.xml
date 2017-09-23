@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
+            <state relative-caret-position="369">
+              <caret line="105" column="73" selection-start-line="105" selection-start-column="73" selection-end-line="105" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -111,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisUtil.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RedisUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -208,8 +207,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wechat/subjectView.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/WeixinController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
       </list>
     </option>
   </component>
@@ -1621,14 +1620,7 @@
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
-      <workItem from="1506134748336" duration="6794000" />
-    </task>
-    <task id="LOCAL-00002" summary="add subject">
-      <created>1497664125789</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1497664125789</updated>
+      <workItem from="1506134748336" duration="7124000" />
     </task>
     <task id="LOCAL-00003" summary="read xsl">
       <created>1499872460102</created>
@@ -1966,7 +1958,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506141641081</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="subject redis">
+      <created>1506148635371</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1506148635371</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2002,7 +2001,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="687091000" />
+    <option name="totallyTimeSpent" value="687421000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2489,18 +2488,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="83" column="49" selection-start-line="83" selection-start-column="49" selection-end-line="83" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="140" column="70" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="105" column="73" selection-start-line="105" selection-start-column="73" selection-end-line="105" selection-end-column="73" />
           <folding />
         </state>
       </provider>
