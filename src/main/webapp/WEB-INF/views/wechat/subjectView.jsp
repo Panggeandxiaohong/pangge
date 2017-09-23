@@ -9,7 +9,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>${type}=====${src}</title>
+    <title>${type}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
 <c:if test="${type eq 'video'}">
