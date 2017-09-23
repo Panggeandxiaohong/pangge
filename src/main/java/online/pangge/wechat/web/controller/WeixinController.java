@@ -33,14 +33,10 @@ public class WeixinController {
             PrintWriter out = response.getWriter();
             out.flush();
             out.print(echostr);
-            System.out.println("write sucess");
             out.flush();
-            System.out.println("flush sucess");
             out.close();
-            out = null;
             return echostr;
         }
-        System.out.println("fail");
         return null;
     }
 
@@ -50,7 +46,6 @@ public class WeixinController {
         // 将请求、响应的编码均设置为UTF-8（防止中文乱码）
         response.setCharacterEncoding("UTF-8");
         // 调用核心业务类接消息、处理消息
-        System.out.println("in controller");
         String respXml = coreService.processRequest(entity);
         // 响应消息
         PrintWriter out = response.getWriter();
