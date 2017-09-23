@@ -104,7 +104,7 @@ public class CoreService {
 							article.setTitle(s.getQuestion());
 							article.setDescription(s.getQuestion());
 							article.setPicUrl("");
-							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+s.getMediaType());
+							article.setUrl("http://39.108.2.41/exam.do?id="+s.getId());
 							List<Article> articleList = new ArrayList<Article>();
 							articleList.add(article);
 							// 创建图文消息
