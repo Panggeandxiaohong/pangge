@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
@@ -48,7 +47,7 @@
       <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="112">
               <caret line="103" column="58" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="58" />
               <folding>
                 <element signature="e#4417#4426#0" expanded="true" />
@@ -72,8 +71,8 @@
       <file leaf-file-name="subjectView.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="546">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -1571,14 +1570,7 @@
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
-      <workItem from="1506134748336" duration="17402000" />
-    </task>
-    <task id="LOCAL-00019" summary="subject redis">
-      <created>1505643148058</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1505643148058</updated>
+      <workItem from="1506134748336" duration="17681000" />
     </task>
     <task id="LOCAL-00020" summary="subject redis">
       <created>1505643336693</created>
@@ -1916,7 +1908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506177571332</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="subject redis">
+      <created>1506178086030</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1506178086030</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1952,7 +1951,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="697699000" />
+    <option name="totallyTimeSpent" value="697978000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2441,7 +2440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="112">
           <caret line="103" column="58" selection-start-line="103" selection-start-column="47" selection-end-line="103" selection-end-column="58" />
           <folding>
             <element signature="e#4417#4426#0" expanded="true" />
@@ -2451,8 +2450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="546">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
           <folding />
         </state>
       </provider>

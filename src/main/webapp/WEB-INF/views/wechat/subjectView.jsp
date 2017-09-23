@@ -18,17 +18,17 @@
     <META name="GENERATOR" content="MSHTML 10.00.9200.16578"></HEAD>
 </head>
 <body>
-<c:if test="${subject.type eq 'video'}">
+<c:if test="${subject.mediaType eq 'video'}">
     <video width="320" height="240" controls="controls">
         <source src="${subject.url}" type="video/mp4" />
     </video>
 </c:if>
-<c:if test="${subject.type eq 'voice'}">
+<c:if test="${subject.mediaType eq 'voice'}">
     <audio id="musicfx" loop="loop" autoplay="autoplay">
         <source src="${subject.url}" type="audio/mpeg">
     </audio>
 </c:if>
-<c:if test="${subject.type eq 'image'}">
+<c:if test="${subject.mediaType eq 'image'}">
     <img src="${subject.url}">
 </c:if>
 ${subject.question}<br/>
