@@ -81,9 +81,9 @@ public class CoreService {
 						responseStr="请按套路出牌";
 					}
 				} else {
-					System.out.println("rediskey=="+redisKey);
 					if ("退出".equals(msg)) {
 						redisUtil.remove("key");
+						redisUtil.remove(fromUserName);
 						responseStr = "退出成功。。。";
 					} else if ("count".equals(redisKey)) {
 						responseStr = "统计中。。。";
