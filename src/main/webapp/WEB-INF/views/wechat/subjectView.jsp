@@ -12,12 +12,12 @@
     <title>${type}=====${src}</title>
 </head>
 <body>
-<c:if test="${type}=='video'">
+<c:if test="${type eq 'video'}">
     <video width="320" height="240" controls="controls">
         <source src="${src}" type="video/mp4" />
     </video>
 </c:if>
-<c:if test="${type}=='voice'">
+<c:if test="${type eq 'voice'}">
     <audio id="musicfx" loop="loop" autoplay="autoplay">
         <source src="${src}" type="audio/mpeg">
     </audio>
