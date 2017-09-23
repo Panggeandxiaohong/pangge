@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/wechat/subjectView.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
     <ignored path="wechat.iws" />
@@ -91,8 +91,8 @@
       <file leaf-file-name="ExamController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -206,9 +206,9 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wechat.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/wechat/subjectView.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/WeixinController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
       </list>
     </option>
   </component>
@@ -1590,14 +1590,7 @@
       <workItem from="1505910623951" duration="2431000" />
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
-      <workItem from="1506134748336" duration="7365000" />
-    </task>
-    <task id="LOCAL-00004" summary="add to github">
-      <created>1505137988297</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1505137988297</updated>
+      <workItem from="1506134748336" duration="7707000" />
     </task>
     <task id="LOCAL-00005" summary="add to github">
       <created>1505142579667</created>
@@ -1935,7 +1928,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506148963730</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="subject redis">
+      <created>1506149208520</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1506149208520</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1971,7 +1971,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="687662000" />
+    <option name="totallyTimeSpent" value="688004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2001,7 +2001,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32844242" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17060086" sideWeight="0.47916666" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17060086" sideWeight="0.47916666" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18133047" sideWeight="0.5208333" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17542918" sideWeight="0.51580137" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21268657" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2467,8 +2467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

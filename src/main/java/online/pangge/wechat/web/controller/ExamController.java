@@ -9,6 +9,6 @@ public class ExamController {
     @RequestMapping("/exam.do")
     public String exam(){
 
-        return "wechat/subjectVide";
+        return "wechat/subjectView";
     }
 }
