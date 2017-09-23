@@ -134,11 +134,11 @@ public final class RedisUtil {
                     System.out.println("question = "+subject.get(i).getQuestion().getClass());
                     System.out.println("subject = "+subject.get(i).getClass());
                     System.out.println("list = "+subject.getClass());
-                    System.out.println("key = "+key + i);
+                    System.out.println("key ========================== "+key);
                     Gson g = new Gson();
-                    System.out.println("###############################"+subject.get(i));
+                    System.out.println("###############################"+subject.get(i)+"##################################");
                     list.rightPush(key, g.toJson(subject.get(i)));
-                    System.out.println("key==="+key+i);
+                    System.out.println("key==========================="+key);
                     logger.info("insert subject = "+subject.get(i));
                     result = true;
                 }
@@ -152,7 +152,7 @@ public final class RedisUtil {
         public Subject getSubject(final String key){
             ListOperations<Serializable, Object> list = redisTemplate.opsForList();
             Integer number = Integer.valueOf(get("subjectNumber").toString());
-            String subjects = list.leftPop(key).toString();
+            String subjects = list.rightPop(key).toString();
             if(subjects==null){
                 return null;
             }
