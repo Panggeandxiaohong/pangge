@@ -103,7 +103,7 @@ public class CoreService {
 							article.setTitle("开源中国");
 							article.setDescription("开源中国社区成立于2008年8月，是目前中国最大的开源技术社区。\n\n开源中国的目的是为中国的IT技术人员提供一个全面的、快捷更新的用来检索开源软件以及交流开源经验的平台。\n\n经过不断的改进,目前开源中国社区已经形成了由开源软件库、代码分享、资讯、讨论区和博客等几大频道内容。");
 							article.setPicUrl("");
-							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl());
+							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+ExamConst.wechat_material_type_video);
 							List<Article> articleList = new ArrayList<Article>();
 							articleList.add(article);
 							// 创建图文消息
@@ -117,18 +117,22 @@ public class CoreService {
 							respXml = MessageUtil.messageToXml(newsMessage);
 							return respXml;
 						}else if(ExamConst.wechat_material_type_voice.equals(s.getMediaType())){
-							MusicMessage music = new MusicMessage();
-							music.setCreateTime(new Date().getTime());
-							music.setFromUserName(toUserName);
-							music.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_MUSIC);
-							music.setToUserName(fromUserName);
-							Music m = new Music();
-							m.setHQMusicUrl(s.getUrl());
-							m.setMusicUrl(s.getUrl());
-							m.setDescription(s.getQuestion());
-							m.setTitle(s.getQuestion());
-							music.setMusic(m);
-							respXml = MessageUtil.messageToXml(music);
+							Article article = new Article();
+							article.setTitle("开源中国");
+							article.setDescription("开源中国社区成立于2008年8月，是目前中国最大的开源技术社区。\n\n开源中国的目的是为中国的IT技术人员提供一个全面的、快捷更新的用来检索开源软件以及交流开源经验的平台。\n\n经过不断的改进,目前开源中国社区已经形成了由开源软件库、代码分享、资讯、讨论区和博客等几大频道内容。");
+							article.setPicUrl("");
+							article.setUrl("http://39.108.2.41/exam.do?src="+s.getUrl()+"&type="+ExamConst.wechat_material_type_voice);
+							List<Article> articleList = new ArrayList<Article>();
+							articleList.add(article);
+							// 创建图文消息
+							NewsMessage newsMessage = new NewsMessage();
+							newsMessage.setToUserName(fromUserName);
+							newsMessage.setFromUserName(toUserName);
+							newsMessage.setCreateTime(new Date().getTime());
+							newsMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);
+							newsMessage.setArticleCount(articleList.size());
+							newsMessage.setArticles(articleList);
+							respXml = MessageUtil.messageToXml(newsMessage);
 							return respXml;
 						}else if(ExamConst.wechat_material_type_image.equals(s.getMediaType())){
 							responseStr = "图片练习。。。";
