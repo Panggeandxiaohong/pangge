@@ -107,7 +107,7 @@ public class CoreService {
                         if (!redisUtil.exists(fromUserName + "subjectNumber")) {
                             redisUtil.set(fromUserName + "subjectNumber", 1);
                         } else {
-                            subjectNumber = Integer.valueOf(redisUtil.get("subjectNumber").toString());
+                            subjectNumber = Integer.valueOf(redisUtil.get(fromUserName +"subjectNumber").toString());
                         }
                         if(redisUtil.exists(fromUserName + ExamConst.exam_type_temp)){
                             Subject beforeSubject = redisUtil.getSubject(fromUserName + ExamConst.exam_type_temp);
