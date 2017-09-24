@@ -80,7 +80,7 @@ public class CoreService {
                         redisUtil.set("key", "exercise", 3600L);
                         List<Subject> allSubject = subjectService.selectAll();
                         for (Subject s : allSubject) {
-                            redisUtil.setSubject(fromUserName, s);
+                            redisUtil.setSubject(fromUserName + ExamConst.exam_type_exercise, s);
                         }
                         responseStr = "开始练习。。。";
                     } else {
