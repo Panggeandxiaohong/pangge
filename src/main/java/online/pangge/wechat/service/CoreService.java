@@ -79,6 +79,7 @@ public class CoreService {
                         redisUtil.remove(fromUserName + ExamConst.exam_type_exercise);
                         redisUtil.set(fromUserName +"key", "exercise", 3600L);
                         List<Subject> allSubject = subjectService.selectAll();
+                        System.out.println(allSubject.size()+"===============================");
                         for (Subject s : allSubject) {
                             System.out.println("set subject ========="+s.toString());
                             redisUtil.setSubject(fromUserName + ExamConst.exam_type_exercise, s);

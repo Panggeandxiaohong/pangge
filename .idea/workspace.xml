@@ -37,10 +37,10 @@
       <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
+            <state relative-caret-position="357">
+              <caret line="81" column="93" selection-start-line="81" selection-start-column="93" selection-end-line="81" selection-end-column="93" />
               <folding>
-                <element signature="e#10598#10607#0" expanded="true" />
+                <element signature="e#10695#10704#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1694,14 +1694,7 @@
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
       <workItem from="1506134748336" duration="22252000" />
-      <workItem from="1506219948666" duration="6857000" />
-    </task>
-    <task id="LOCAL-00028" summary="subject redis">
-      <created>1505647233833</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1505647233833</updated>
+      <workItem from="1506219948666" duration="6967000" />
     </task>
     <task id="LOCAL-00029" summary="subject redis">
       <created>1505647439450</created>
@@ -2039,7 +2032,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506269387607</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="subject redis">
+      <created>1506269626747</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1506269626747</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2075,7 +2075,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="709406000" />
+    <option name="totallyTimeSpent" value="709516000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2539,10 +2539,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
+        <state relative-caret-position="357">
+          <caret line="81" column="93" selection-start-line="81" selection-start-column="93" selection-end-line="81" selection-end-column="93" />
           <folding>
-            <element signature="e#10598#10607#0" expanded="true" />
+            <element signature="e#10695#10704#0" expanded="true" />
           </folding>
         </state>
       </provider>
