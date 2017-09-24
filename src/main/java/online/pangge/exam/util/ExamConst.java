@@ -16,6 +16,10 @@ public class ExamConst {
 
     public static final String redis_key_type_menu = "session";
 
+    public static final String exam_type_exercise = "exercise";
+    public static final String exam_type_temp = "temp";
+    public static final String exam_type_exam = "exam";
+    public static final String exam_type_answer = "answer";
 
     public static final String wechat_material_type_image = "image";
     public static final String wechat_material_type_text = "text";

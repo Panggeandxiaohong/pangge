@@ -3,19 +3,16 @@ package online.pangge.exam.util;
 import com.google.gson.Gson;
 import online.pangge.exam.domain.Subject;
 import org.apache.log4j.Logger;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
  * redis cache 工具类
- *
  */
 public final class RedisUtil {
     private Logger logger = Logger.getLogger(RedisUtil.class);
@@ -28,7 +25,7 @@ public final class RedisUtil {
      */
     public void remove(final String... keys) {
         for (String key : keys) {
-            logger.info("remove keys = "+key);
+            logger.info("remove keys = " + key);
             remove(key);
         }
     }
@@ -41,7 +38,7 @@ public final class RedisUtil {
     public void removePattern(final String pattern) {
         Set<Serializable> keys = redisTemplate.keys(pattern);
         if (keys.size() > 0) {
-            logger.info("remove pattern = "+pattern);
+            logger.info("remove pattern = " + pattern);
             redisTemplate.delete(keys);
         }
     }
@@ -53,7 +50,7 @@ public final class RedisUtil {
      */
     public void remove(final String key) {
         if (exists(key)) {
-            logger.info("remove sinle key = "+key);
+            logger.info("remove sinle key = " + key);
             redisTemplate.delete(key);
         }
     }
@@ -94,7 +91,7 @@ public final class RedisUtil {
         try {
             ValueOperations<Serializable, Object> operations = redisTemplate
                     .opsForValue();
-            logger.info("set key - value,key = "+key+",value="+value.getClass());
+            logger.info("set key - value,key = " + key + ",value=" + value.getClass());
             operations.set(key, value);
             result = true;
         } catch (Exception e) {
@@ -115,7 +112,7 @@ public final class RedisUtil {
         try {
             ValueOperations<Serializable, Object> operations = redisTemplate
                     .opsForValue();
-            logger.info("set key - value,key = "+key+",value="+value.getClass()+",expire time = "+expireTime);
+            logger.info("set key - value,key = " + key + ",value=" + value.getClass() + ",expire time = " + expireTime);
             operations.set(key, value);
             redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
             result = true;
@@ -125,42 +122,33 @@ public final class RedisUtil {
         return result;
     }
 
-        public boolean setSubject(final String key, List<Subject> subject) {
-            boolean result = false;
-            try {
-                HashOperations<Serializable, String, Object> hash = redisTemplate.opsForHash();
-                ListOperations<Serializable, Object> list = redisTemplate.opsForList();
-                for (int i = 0; i < subject.size(); i++) {
-                    System.out.println("question = "+subject.get(i).getQuestion().getClass());
-                    System.out.println("subject = "+subject.get(i).getClass());
-                    System.out.println("list = "+subject.getClass());
-                    System.out.println("key ========================== "+key);
-                    Gson g = new Gson();
-                    System.out.println("###############################"+subject.get(i)+"##################################");
-                    list.rightPush(key, g.toJson(subject.get(i)));
-                    System.out.println("key==========================="+key);
-                    logger.info("insert subject = "+subject.get(i));
-                    result = true;
-                }
-            } catch (Exception e) {
-                logger.error("insert subject error : ",e);
-                e.printStackTrace();
-            }
-            return result;
-        }
-
-        public Subject getSubject(final String key){
+    public boolean setSubject(final String key, Subject subject) {
+        boolean result = false;
+        try {
             ListOperations<Serializable, Object> list = redisTemplate.opsForList();
-            Integer number = Integer.valueOf(get("subjectNumber").toString());
-            String subjects = list.rightPop(key).toString();
-            if(subjects==null){
-                return null;
-            }
             Gson g = new Gson();
-            System.out.println("####################################"+subjects+"#################");
-            Subject s = g.fromJson(subjects,Subject.class);
-            return s;
+            list.rightPush(key, g.toJson(subject));
+            result = true;
+        } catch (Exception e) {
+            logger.error("insert subject error : ", e);
+            e.printStackTrace();
         }
+        return result;
+    }
+
+    public Subject getSubject(final String key) {
+        ListOperations<Serializable, Object> list = redisTemplate.opsForList();
+        Integer number = Integer.valueOf(get("subjectNumber").toString());
+        String subjects = list.rightPop(key).toString();
+        if (subjects == null) {
+            return null;
+        }
+        Gson g = new Gson();
+        System.out.println("####################################" + subjects + "#################");
+        Subject s = g.fromJson(subjects, Subject.class);
+        return s;
+    }
+
     public void setRedisTemplate(
             RedisTemplate<Serializable, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
