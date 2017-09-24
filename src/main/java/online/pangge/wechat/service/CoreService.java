@@ -109,9 +109,11 @@ public class CoreService {
                         } else {
                             subjectNumber = Integer.valueOf(redisUtil.get("subjectNumber").toString());
                         }
-                        Subject beforeSubject = redisUtil.getSubject(fromUserName + ExamConst.exam_type_temp);
-                        beforeSubject.setUserAnswer(msg);
-                        redisUtil.setSubject(fromUserName + ExamConst.exam_type_answer, beforeSubject);
+                        if(redisUtil.exists(fromUserName + ExamConst.exam_type_temp)){
+                            Subject beforeSubject = redisUtil.getSubject(fromUserName + ExamConst.exam_type_temp);
+                            beforeSubject.setUserAnswer(msg);
+                            redisUtil.setSubject(fromUserName + ExamConst.exam_type_answer, beforeSubject);
+                        }
                         return getNewsMessageXML(fromUserName, toUserName, subjectNumber);
                     } else if ("exam".equals(redisKey)) {
                         responseStr = "考试中。。。";
