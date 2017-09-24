@@ -4,6 +4,7 @@
     <list default="true" id="3afac2c4-fb7a-4138-a591-a8c16cd1fdc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" afterPath="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
     </list>
     <list id="23c08fe3-ddbc-4eb3-9e5a-b3804d5e9509" name="New changelist" comment="" />
     <ignored path="wechat.iws" />
@@ -34,13 +35,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CoreService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="81" column="93" selection-start-line="81" selection-start-column="93" selection-end-line="81" selection-end-column="93" />
+            <state relative-caret-position="399">
+              <caret line="83" column="114" selection-start-line="83" selection-start-column="114" selection-end-line="83" selection-end-column="114" />
               <folding>
-                <element signature="e#10695#10704#0" expanded="true" />
+                <element signature="e#10726#10735#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExamController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExamController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="25" column="61" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="61" />
+            <state relative-caret-position="483">
+              <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -205,10 +206,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/wechat/subjectView.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/ExamConst.java" />
-        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/exam/util/RedisUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java" />
       </list>
     </option>
   </component>
@@ -1694,14 +1695,7 @@
       <workItem from="1505995478876" duration="598000" />
       <workItem from="1506086977321" duration="12927000" />
       <workItem from="1506134748336" duration="22252000" />
-      <workItem from="1506219948666" duration="6967000" />
-    </task>
-    <task id="LOCAL-00029" summary="subject redis">
-      <created>1505647439450</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1505647439450</updated>
+      <workItem from="1506219948666" duration="7150000" />
     </task>
     <task id="LOCAL-00030" summary="subject redis">
       <created>1505647553399</created>
@@ -2039,7 +2033,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506269626747</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="subject redis">
+      <created>1506269737445</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1506269737445</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2075,7 +2076,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="709516000" />
+    <option name="totallyTimeSpent" value="709699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2495,14 +2496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/ExamConst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/damain/XmlMessageEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -2527,22 +2520,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="25" column="61" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="61" />
+        <state relative-caret-position="399">
+          <caret line="83" column="114" selection-start-line="83" selection-start-column="114" selection-end-line="83" selection-end-column="114" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#10726#10735#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/service/CoreService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/exam/util/ExamConst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="81" column="93" selection-start-line="81" selection-start-column="93" selection-end-line="81" selection-end-column="93" />
+        <state relative-caret-position="266">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/online/pangge/wechat/web/controller/ExamController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
           <folding>
-            <element signature="e#10695#10704#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

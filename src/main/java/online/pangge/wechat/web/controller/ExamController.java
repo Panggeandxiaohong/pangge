@@ -21,6 +21,7 @@ public class ExamController {
 
     @RequestMapping("/exam.do")
     public String exam(String fromUserName, Model model) {
+        System.out.println("get ====="+fromUserName + ExamConst.exam_type_exercise);
         Subject subject = redisUtil.getSubject(fromUserName + ExamConst.exam_type_exercise);
         redisUtil.setSubject(fromUserName + ExamConst.exam_type_temp,subject);
         redisUtil.set(fromUserName + "subjectNumber", Integer.valueOf(redisUtil.get(fromUserName+"subjectNumber").toString())+1);
