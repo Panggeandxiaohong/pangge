@@ -67,19 +67,20 @@ public class CoreService {
             String responseStr = null;
             // 文本消息
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT)) {
-                String redisKey = (String) redisUtil.get("key");
+                String redisKey = (String) redisUtil.get(fromUserName +"key");
                 if (StringUtils.isEmpty(redisKey)) {
                     if (msg.contains("自测")) {
-                        redisUtil.set("key", "exam", 3600L);
+                        redisUtil.set(fromUserName +"key", "exam", 3600L);
                         responseStr = "开始自测。。。";
                     } else if (msg.contains("统计")) {
-                        redisUtil.set("key", "count", 3600L);
+                        redisUtil.set(fromUserName +"key", "count", 3600L);
                         responseStr = "真正的开始统计。。。";
                     } else if (msg.contains("练习")) {
-                        redisUtil.remove(fromUserName);
-                        redisUtil.set("key", "exercise", 3600L);
+                        redisUtil.remove(fromUserName + ExamConst.exam_type_exercise);
+                        redisUtil.set(fromUserName +"key", "exercise", 3600L);
                         List<Subject> allSubject = subjectService.selectAll();
                         for (Subject s : allSubject) {
+                            System.out.println("set subject ========="+s.toString());
                             redisUtil.setSubject(fromUserName + ExamConst.exam_type_exercise, s);
                         }
                         responseStr = "开始练习。。。";
@@ -88,14 +89,14 @@ public class CoreService {
                     }
                 } else {
                     if ("退出".equals(msg)) {
-                        redisUtil.remove("key");
+                        redisUtil.remove(fromUserName +"key");
                         redisUtil.remove(fromUserName + ExamConst.exam_type_exercise);
                         responseStr = "退出成功。。。";
                     } else if ("count".equals(redisKey)) {
                         responseStr = "统计中。。。";
                     } else if ("exercise".equals(redisKey)) {
                         if (!redisUtil.exists(fromUserName + ExamConst.exam_type_exercise)) {
-                            redisUtil.remove("key");
+                            redisUtil.remove(fromUserName +"key");
                             respContent = "你的分数不及格！";
                             // 设置文本消息的内容
                             textMessage.setContent(respContent);
