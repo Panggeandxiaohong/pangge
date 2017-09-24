@@ -62,7 +62,6 @@ public class Test {
     @org.junit.Test
     public void jsontest() {
         List<Subject> list = subjectService.selectAll();
-        redisUtil.setSubject("s",list);
         Subject s = redisUtil.getSubject("s");
         System.out.println(s.getQuestion());
     }
