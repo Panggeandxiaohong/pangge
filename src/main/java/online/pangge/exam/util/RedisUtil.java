@@ -138,7 +138,6 @@ public final class RedisUtil {
 
     public Subject getSubject(final String key) {
         ListOperations<Serializable, Object> list = redisTemplate.opsForList();
-        Integer number = Integer.valueOf(get("subjectNumber").toString());
         String subjects = list.rightPop(key).toString();
         if (subjects == null) {
             return null;
