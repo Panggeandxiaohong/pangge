@@ -25,15 +25,15 @@ public class ExamController {
     public RedisUtil redisUtil;
 
     @RequestMapping("/exam.do")
-    public String exam(String str8859, Model model) {
+    public String exam(String subjectString, Model model) {
         try {
-            System.out.println(str8859);
-            str8859 = new String(str8859.getBytes("iso8859-1"),"utf-8");
-            System.out.println(str8859);
+            System.out.println(subjectString);
+            subjectString = new String(subjectString.getBytes("iso8859-1"),"utf-8");
+            System.out.println(subjectString);
         } catch (UnsupportedEncodingException e) {
             logger.error("decoder error",e);
         }
-        Subject subject = new Gson().fromJson(str8859, Subject.class);
+        Subject subject = new Gson().fromJson(subjectString, Subject.class);
         model.addAttribute("subject", subject);
         return "wechat/subjectView";
     }
