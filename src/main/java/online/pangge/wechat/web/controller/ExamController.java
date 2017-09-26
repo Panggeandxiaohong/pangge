@@ -11,8 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 
 @Controller
 public class ExamController {
@@ -26,11 +26,10 @@ public class ExamController {
     public RedisUtil redisUtil;
 
     @RequestMapping("/exam.do")
-    public String exam(HttpServletRequest request, Model model) {
-        String subjectString = "";
+    public String exam(String subjectString, Model model) {
         try {
             System.out.println(subjectString);
-            new String(request.getParameter("subjectString").getBytes("iso8859-1"),"UTF-8");
+            subjectString = URLDecoder.decode(subjectString,"utf-8");
             System.out.println(subjectString);
         } catch (UnsupportedEncodingException e) {
             logger.error("decoder error",e);
