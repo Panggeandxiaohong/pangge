@@ -17,7 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -230,7 +229,7 @@ public class CoreService {
         article.setTitle("第"+redisUtil.get(fromUserName + "subjectNumber").toString()+"题：");
         article.setDescription(s.getQuestion());
         article.setPicUrl("");
-        subjectString = URLEncoder.encode(subjectString,"utf-8");
+//        subjectString = URLEncoder.encode(subjectString,"utf-8");
         article.setUrl("http://39.108.2.41/exam.do?subjectString="+subjectString);
         List<Article> articleList = new ArrayList<Article>();
         articleList.add(article);
