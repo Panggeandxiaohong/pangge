@@ -16,6 +16,7 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
@@ -122,7 +123,6 @@ public class CoreService {
                         redisUtil.setSubject(fromUserName + ExamConst.exam_type_temp,subject);
                         redisUtil.set(fromUserName + "subjectNumber", Integer.valueOf(redisUtil.get(fromUserName+"subjectNumber").toString())+1);
                         String subjectStr = new Gson().toJson(subject,Subject.class);
-                        subjectStr = URLEncoder.encode(subjectStr,"utf-8");
                         return getNewsMessageXML(fromUserName, toUserName, subjectStr);
                     } else if ("exam".equals(redisKey)) {
                         responseStr = "考试中。。。";
@@ -224,12 +224,13 @@ public class CoreService {
         return respXml;
     }
 
-    private String getNewsMessageXML(String fromUserName, String toUserName, String subjectString) {
+    private String getNewsMessageXML(String fromUserName, String toUserName, String subjectString) throws UnsupportedEncodingException {
         Article article = new Article();
         Subject s = new Gson().fromJson(subjectString,Subject.class);
         article.setTitle("第"+redisUtil.get(fromUserName + "subjectNumber").toString()+"题：");
         article.setDescription(s.getQuestion());
         article.setPicUrl("");
+        subjectString = URLEncoder.encode(subjectString,"utf-8");
         article.setUrl("http://39.108.2.41/exam.do?subjectString="+subjectString);
         List<Article> articleList = new ArrayList<Article>();
         articleList.add(article);
