@@ -27,9 +27,9 @@ public class ExamController {
     @RequestMapping("/exam.do")
     public String exam(String subjectString, Model model) {
         try {
-            System.out.println(subjectString);
+            System.out.println("before decode  = = = = = = = "+subjectString);
             subjectString = new String(subjectString.getBytes("iso8859-1"),"utf-8");
-            System.out.println(subjectString);
+            System.out.println("after decode  = = = = = = = "+subjectString);
         } catch (UnsupportedEncodingException e) {
             logger.error("decoder error",e);
         }
