@@ -230,8 +230,8 @@ public class CoreService {
         article.setDescription(s.getQuestion());
         article.setPicUrl("");
 //        subjectString = URLEncoder.encode(subjectString,"utf-8");
-        String str8859 = new String(subjectString.getBytes("utf-8"),"iso8859-1");
-        article.setUrl("http://39.108.2.41/exam.do?subjectString="+str8859);
+//        String str8859 = new String(subjectString.getBytes("utf-8"),"iso8859-1");
+        article.setUrl("http://39.108.2.41/exam.do?subjectString="+subjectString);
         List<Article> articleList = new ArrayList<Article>();
         articleList.add(article);
         // 创建图文消息
