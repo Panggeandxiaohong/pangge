@@ -28,7 +28,9 @@ public class ExamController {
     @RequestMapping("/exam.do")
     public String exam(String subjectString, Model model) {
         try {
+            System.out.println(subjectString);
             subjectString = URLDecoder.decode(subjectString,"utf-8");
+            System.out.println(subjectString);
         } catch (UnsupportedEncodingException e) {
             logger.error("decoder error",e);
         }
