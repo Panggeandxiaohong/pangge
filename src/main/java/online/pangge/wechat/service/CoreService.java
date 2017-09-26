@@ -1,5 +1,6 @@
 package online.pangge.wechat.service;
 
+import com.google.gson.Gson;
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.service.ISubjectService;
@@ -116,7 +117,11 @@ public class CoreService {
                             beforeSubject.setUserAnswer(msg);
                             redisUtil.setSubject(fromUserName + ExamConst.exam_type_answer, beforeSubject);
                         }
-                        return getNewsMessageXML(fromUserName, toUserName, subjectNumber);
+                        Subject subject = redisUtil.getSubject(fromUserName + ExamConst.exam_type_exercise);
+                        redisUtil.setSubject(fromUserName + ExamConst.exam_type_temp,subject);
+                        redisUtil.set(fromUserName + "subjectNumber", Integer.valueOf(redisUtil.get(fromUserName+"subjectNumber").toString())+1);
+                        String subjectStr = new Gson().toJson(subject,Subject.class);
+                        return getNewsMessageXML(fromUserName, toUserName, subjectStr);
                     } else if ("exam".equals(redisKey)) {
                         responseStr = "考试中。。。";
                     }
@@ -217,12 +222,13 @@ public class CoreService {
         return respXml;
     }
 
-    private String getNewsMessageXML(String fromUserName, String toUserName, int s) {
+    private String getNewsMessageXML(String fromUserName, String toUserName, String subjectString) {
         Article article = new Article();
-        article.setTitle("第"+s+"题：");
-        article.setDescription("");
+        Subject s = new Gson().fromJson(subjectString,Subject.class);
+        article.setTitle("第"+redisUtil.get(fromUserName + "subjectNumber").toString()+"题：");
+        article.setDescription(s.getQuestion());
         article.setPicUrl("");
-        article.setUrl("http://39.108.2.41/exam.do?fromUserName="+fromUserName);
+        article.setUrl("http://39.108.2.41/exam.do?subjectString="+subjectString);
         List<Article> articleList = new ArrayList<Article>();
         articleList.add(article);
         // 创建图文消息
