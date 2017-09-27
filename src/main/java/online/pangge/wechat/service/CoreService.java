@@ -102,6 +102,7 @@ public class CoreService {
                     } else if ("exercise".equals(redisKey)) {
                         if (!redisUtil.exists(fromUserName + ExamConst.exam_type_exercise)) {
                             redisUtil.remove(fromUserName +"key");
+                            redisUtil.remove(fromUserName + "subjectNumber");
                             respContent = "你的分数不及格！";
                             // 设置文本消息的内容
                             textMessage.setContent(respContent);
@@ -117,7 +118,7 @@ public class CoreService {
                         }
                         Subject subject = redisUtil.getSubject(fromUserName + ExamConst.exam_type_exercise);
                         redisUtil.setSubject(fromUserName + ExamConst.exam_type_temp,subject);
-                        redisUtil.set(fromUserName + "subjectNumber", Integer.valueOf(redisUtil.get(fromUserName+"subjectNumber").toString())+1);
+//                        redisUtil.set(fromUserName + "subjectNumber", Integer.valueOf(redisUtil.get(fromUserName+"subjectNumber").toString())+1);
                         String subjectStr = new Gson().toJson(subject,Subject.class);
                         return getNewsMessageXML(fromUserName, toUserName, subjectStr);
                     } else if ("exam".equals(redisKey)) {
