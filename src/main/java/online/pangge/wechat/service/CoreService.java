@@ -51,7 +51,7 @@ public class CoreService {
         String respContent = "未知的消息类型！";
         try {
             // 调用parseXml方法解析请求消息
-            //Map<String, String> requestMap = MessageUtil.parseXml(request);
+//            Map<String, String> requestMap = MessageUtil.parseXml(request);
             // 发送方帐号
             String fromUserName = entity.getFromUserName();
             // 开发者微信号
@@ -104,6 +104,10 @@ public class CoreService {
                             redisUtil.remove(fromUserName +"key");
                             redisUtil.remove(fromUserName + "subjectNumber");
                             respContent = "你的分数不及格！";
+                            List<Subject> answerSubjects = redisUtil.getSubjects(fromUserName + ExamConst.exam_type_answer);
+                            for(int i = 0 ; i < answerSubjects.size() ; i++){
+                                System.out.println("ansert ============="+answerSubjects.get(i));
+                            }
                             // 设置文本消息的内容
                             textMessage.setContent(respContent);
                             // 将文本消息对象转换成xml

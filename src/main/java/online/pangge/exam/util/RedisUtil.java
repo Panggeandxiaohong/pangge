@@ -8,6 +8,9 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -143,9 +146,32 @@ public final class RedisUtil {
             return null;
         }
         Gson g = new Gson();
-        System.out.println("####################################" + subjects + "#################");
         Subject s = g.fromJson(subjects, Subject.class);
         return s;
+    }
+
+    /**
+     * get subject list
+     *
+     * @param key
+     * @return
+     */
+    public List<Subject> getSubjects(final String key) {
+        List<Subject> subjectList = new ArrayList<>();
+        ListOperations<Serializable, Object> list = redisTemplate.opsForList();
+        if (list.size(key) <= 0) {
+            return Collections.EMPTY_LIST;
+        }
+        while (redisTemplate.hasKey(key)) {
+            String subjects = list.rightPop(key).toString();
+            if (subjects == null) {
+                return null;
+            }
+            Gson g = new Gson();
+            Subject s = g.fromJson(subjects, Subject.class);
+            subjectList.add(s);
+        }
+        return subjectList;
     }
 
     public void setRedisTemplate(
