@@ -101,15 +101,13 @@ public class CoreService {
                         responseStr = "统计中。。。";
                     } else if ("exercise".equals(redisKey)) {
                         if (!redisUtil.exists(fromUserName + ExamConst.exam_type_exercise)) {
-                            redisUtil.remove(fromUserName +"key");
+                            redisUtil.remove(fromUserName+"key");
                             redisUtil.remove(fromUserName + "subjectNumber");
-                            respContent = "你的分数不及格！";
+                            respContent = "你的分数是";
                             List<Subject> answerSubjects = redisUtil.getSubjects(fromUserName + ExamConst.exam_type_answer);
-                            for(int i = 0 ; i < answerSubjects.size() ; i++){
-                                System.out.println("ansert ============="+answerSubjects.get(i));
-                            }
+                            int score = Correcting(answerSubjects);
                             // 设置文本消息的内容
-                            textMessage.setContent(respContent);
+                            textMessage.setContent(respContent+score);
                             // 将文本消息对象转换成xml
                             respXml = MessageUtil.messageToXml(textMessage);
                             return respXml;
@@ -212,5 +210,20 @@ public class CoreService {
         newsMessage.setArticleCount(articleList.size());
         newsMessage.setArticles(articleList);
         return MessageUtil.messageToXml(newsMessage);
+    }
+    private int Correcting(List<Subject> subjects){
+        int score = 0;
+        List<Subject> wrongSubjects = new ArrayList<>();
+        for(int i = 0 ; i < subjects.size();i++){
+            Subject subject = subjects.get(i);
+            if(subject.getAnswer().equals(subject.getUserAnswer())){
+                //reght
+                score +=1;
+            }else{
+                //wrong
+                wrongSubjects.add(subject);
+            }
+        }
+        return score;
     }
 }
