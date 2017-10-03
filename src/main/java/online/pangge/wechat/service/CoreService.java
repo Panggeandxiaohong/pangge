@@ -243,6 +243,7 @@ public class CoreService {
                 //wrong
                 WrongSubjectLink wrongSubjectLink = new WrongSubjectLink();
                 wrongSubjectLink.setSubId(subject.getId());
+                wrongSubjectLink.setUserAnswer(subject.getUserAnswer());
                 wrongSubjectLink.setLastUpdateDate(new Date());
                 wrongSubjectLink.setUserId(studentService.selectByWechatName(fromusername).get(0).getId());
                 wrongSubjects.add(wrongSubjectLink);

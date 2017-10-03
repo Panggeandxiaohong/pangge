@@ -11,4 +11,6 @@ public class WrongSubjectLink {
     private Long subId;
 
     private Date lastUpdateDate;
+
+    private String userAnswer;
 }
