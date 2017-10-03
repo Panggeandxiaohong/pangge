@@ -23,7 +23,7 @@
     )
     values
     <foreach collection="list" index="index" separator="," item="link">
-      (#{link.userId}, #{link.subId},#{userAnswer},
+      (#{link.userId}, #{link.subId},#{link.userAnswer},
       #{link.lastUpdateDate})
     </foreach>
   </insert>

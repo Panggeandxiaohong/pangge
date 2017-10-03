@@ -245,7 +245,7 @@ public class CoreService {
                 wrongSubjectLink.setSubId(subject.getId());
                 wrongSubjectLink.setUserAnswer(subject.getUserAnswer());
                 wrongSubjectLink.setLastUpdateDate(new Date());
-                wrongSubjectLink.setUserId(studentService.selectByWechatName(fromusername).get(0).getId());
+                wrongSubjectLink.setUserId(studentService.selectByWechatName(fromusername).get(0).getStunum());
                 wrongSubjects.add(wrongSubjectLink);
             }
         }
