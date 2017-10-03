@@ -109,6 +109,7 @@ public class CoreService {
                         responseStr = "统计中。。。";
                     }else if ("bind".equals(redisKey)) {
                         String[] userNameAndPassword = msg.split("#");
+                        System.out.println("stunum = "+Long.valueOf(userNameAndPassword[0]));
                         Student stu = studentService.selectByStunum(Long.valueOf(userNameAndPassword[0])).get(0);
                         if(stu.getPassword().equals(userNameAndPassword[1])){
                             stu.setWechatname(fromUserName);
