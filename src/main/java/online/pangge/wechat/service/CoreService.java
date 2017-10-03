@@ -118,6 +118,7 @@ public class CoreService {
                         }else{
                             responseStr = "綁定失敗。。。";
                         }
+                        redisUtil.remove(fromUserName +"key");
                     }  else if ("exercise".equals(redisKey)) {
                         if (!redisUtil.exists(fromUserName + ExamConst.exam_type_exercise)) {
                             redisUtil.remove(fromUserName+"key");
