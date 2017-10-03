@@ -65,57 +65,6 @@
     <update id="updateByPrimaryKey">
         update subject
         set
-        <!-- <if test="subject.question!=null">
-             question = #{subject.question,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.answerA!=null">
-             A = #{subject.answerA,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.answerB!=null">
-             B = #{subject.answerB,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.answerC!=null">
-             C = #{subject.answerC,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.answerD!=null">
-             D = #{subject.answerD,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.processStatus!=null">
-             process_status = #{subject.processStatus,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.answer!=null">
-             answer = #{subject.answer,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.explain!=null">
-             explain = #{subject.explain,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.subjectType!=null">
-             subject_type = #{subject.subjectType.id},
-         </if>
-         <if test="subject.addtime!=null">
-             addtime = #{subject.addtime,jdbcType=TIMESTAMP},
-         </if>
-         <if test="subject.adduser!=null">
-             adduser = #{subject.adduser.id,jdbcType=BIGINT},
-         </if>
-         <if test="subject.score!=null">
-             score = #{subject.score,jdbcType=DOUBLE},
-         </if>
-         <if test="subject.classes!=null">
-             classes = #{subject.classes.id},
-         </if>
-         <if test="subject.mediaType!=null">
-             mediaType = #{subject.mediaType,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.userAnswer!=null">
-             userAnswer = #{subject.userAnswer,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.url!=null">
-             url = #{subject.url,jdbcType=VARCHAR},
-         </if>
-         <if test="subject.user!=null">
-             userId = #{subject.user.id,jdbcType=BIGINT}
-         </if>-->
         <foreach collection="subject" item="con" index="key" separator="," >
             ${key}=#{con}
         </foreach>

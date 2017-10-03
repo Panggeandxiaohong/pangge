@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="online.pangge.exam.mapper.WrongSubjectLinkMapper" >
+  <resultMap id="BaseResultMap" type="online.pangge.exam.domain.WrongSubjectLink" >
+    <id column="user_id" property="userId" jdbcType="BIGINT" />
+    <id column="sub_id" property="subId" jdbcType="BIGINT" />
+    <result column="last_update_date" property="lastUpdateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map" >
+    delete from wrong_subject_link
+    where user_id = #{userId,jdbcType=BIGINT}
+      and sub_id = #{subId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="online.pangge.exam.domain.WrongSubjectLink" >
+    insert into wrong_subject_link (user_id, sub_id, last_update_date
+      )
+    values (#{userId,jdbcType=BIGINT}, #{subId,jdbcType=BIGINT}, #{lastUpdateDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertWrongSubjectLinks" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+    insert into wrong_subject_link (user_id, sub_id, last_update_date
+    )
+    values
+    <foreach collection="list" index="index" separator="," item="link">
+      (#{link.userId}, #{link.subjectId},
+      #{link.lastUpdateDate})
+    </foreach>
+  </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="map" >
+    select user_id, sub_id, last_update_date
+    from wrong_subject_link
+    where user_id = #{userId,jdbcType=BIGINT}
+      and sub_id = #{subId,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select user_id, sub_id, last_update_date
+    from wrong_subject_link
+  </select>
+</mapper>

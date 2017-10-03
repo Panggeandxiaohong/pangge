@@ -19,4 +19,7 @@ public interface StudentMapper {
 
     @Select("select * from student where id=#{id}")
     public Student selectById(@Param("id")Long id);
+
+    @Select("select * from student where wechatname=#{wechatname}")
+    public List<Student> selectByWechatName(@Param("wechatname")String wechatname);
 }

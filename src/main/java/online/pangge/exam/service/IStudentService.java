@@ -17,4 +17,6 @@ public interface IStudentService {
     List<Student> selectAll();
 
     int updateByPrimaryKey(Student record);
+
+    List<Student> selectByWechatName(String wechatname);
 }

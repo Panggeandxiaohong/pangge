@@ -44,4 +44,9 @@ public class StudentServiceImpl implements IStudentService {
     public int updateByPrimaryKey(Student record) {
         return studentMapper.updateByPrimaryKey(record);
     }
+
+    @Override
+    public List<Student> selectByWechatName(String wechatname) {
+        return studentMapper.selectByWechatName(wechatname);
+    }
 }

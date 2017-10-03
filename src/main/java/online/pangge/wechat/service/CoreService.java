@@ -2,8 +2,10 @@ package online.pangge.wechat.service;
 
 import com.google.gson.Gson;
 import online.pangge.exam.domain.Subject;
+import online.pangge.exam.domain.WrongSubjectLink;
 import online.pangge.exam.service.IStudentService;
 import online.pangge.exam.service.ISubjectService;
+import online.pangge.exam.service.IWrongSubjectService;
 import online.pangge.exam.util.ExamConst;
 import online.pangge.exam.util.OSSUtil;
 import online.pangge.exam.util.RedisUtil;
@@ -43,6 +45,8 @@ public class CoreService {
     private IStudentService studentService;
     @Autowired
     private ISubjectService subjectService;
+    @Autowired
+    private IWrongSubjectService wrongSubjectService;
 
     public String processRequest(XmlMessageEntity entity) {
         // xml格式的消息数据
@@ -105,7 +109,7 @@ public class CoreService {
                             redisUtil.remove(fromUserName + "subjectNumber");
                             respContent = "你的分数是";
                             List<Subject> answerSubjects = redisUtil.getSubjects(fromUserName + ExamConst.exam_type_answer);
-                            int score = Correcting(answerSubjects);
+                            int score = Correcting(answerSubjects,fromUserName);
                             // 设置文本消息的内容
                             textMessage.setContent(respContent+score);
                             // 将文本消息对象转换成xml
@@ -211,9 +215,9 @@ public class CoreService {
         newsMessage.setArticles(articleList);
         return MessageUtil.messageToXml(newsMessage);
     }
-    private int Correcting(List<Subject> subjects){
+    private int Correcting(List<Subject> subjects,String fromusername){
         int score = 0;
-        List<Subject> wrongSubjects = new ArrayList<>();
+        List<WrongSubjectLink> wrongSubjects = new ArrayList<>();
         for(int i = 0 ; i < subjects.size();i++){
             Subject subject = subjects.get(i);
             if(subject.getAnswer().equals(subject.getUserAnswer())){
@@ -221,9 +225,14 @@ public class CoreService {
                 score +=1;
             }else{
                 //wrong
-                wrongSubjects.add(subject);
+                WrongSubjectLink wrongSubjectLink = new WrongSubjectLink();
+                wrongSubjectLink.setSubId(subject.getId());
+                wrongSubjectLink.setLastUpdateDate(new Date());
+                wrongSubjectLink.setUserId(studentService.selectByWechatName(fromusername).get(0).getId());
+                wrongSubjects.add(wrongSubjectLink);
             }
         }
+        wrongSubjectService.insertWrongSubjectLinks(wrongSubjects);
         return score;
     }
 }
