@@ -40,7 +40,7 @@
     from student
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectByStunum" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByStunum" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select id, name, classes, password, wechatname, stunum, sex,create_date,last_update_date,admin
     from student
     where stunum = #{stunum}
