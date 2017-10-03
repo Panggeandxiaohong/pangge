@@ -1,6 +1,7 @@
 package online.pangge.wechat.service;
 
 import com.google.gson.Gson;
+import online.pangge.exam.domain.Student;
 import online.pangge.exam.domain.Subject;
 import online.pangge.exam.domain.WrongSubjectLink;
 import online.pangge.exam.service.IStudentService;
@@ -82,6 +83,9 @@ public class CoreService {
                     } else if (msg.contains("统计")) {
                         redisUtil.set(fromUserName +"key", "count", 3600L);
                         responseStr = "真正的开始统计。。。";
+                    }else if(msg.contains("统计")){
+                        redisUtil.set(fromUserName +"key", "bind", 3600L);
+                        responseStr = "开始绑定，请输入学号#密码进行绑定，比如：000#000";
                     } else if (msg.contains("练习")) {
                         redisUtil.remove(fromUserName + ExamConst.exam_type_exercise);
                         redisUtil.set(fromUserName +"key", "exercise", 3600L);
@@ -103,7 +107,17 @@ public class CoreService {
                         responseStr = "退出成功。。。";
                     } else if ("count".equals(redisKey)) {
                         responseStr = "统计中。。。";
-                    } else if ("exercise".equals(redisKey)) {
+                    }else if ("bind".equals(redisKey)) {
+                        String[] userNameAndPassword = msg.split("#");
+                        Student stu = studentService.selectByStunum(Long.valueOf(userNameAndPassword[0])).get(0);
+                        if(stu.getPassword().equals(userNameAndPassword[1])){
+                            stu.setWechatname(fromUserName);
+                            studentService.updateByPrimaryKey(stu);
+                            responseStr = "綁定成功。。。";
+                        }else{
+                            responseStr = "綁定失敗。。。";
+                        }
+                    }  else if ("exercise".equals(redisKey)) {
                         if (!redisUtil.exists(fromUserName + ExamConst.exam_type_exercise)) {
                             redisUtil.remove(fromUserName+"key");
                             redisUtil.remove(fromUserName + "subjectNumber");

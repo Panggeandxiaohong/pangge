@@ -19,4 +19,6 @@ public interface IStudentService {
     int updateByPrimaryKey(Student record);
 
     List<Student> selectByWechatName(String wechatname);
+
+    List<Student> selectByStunum(Long stunum);
 }

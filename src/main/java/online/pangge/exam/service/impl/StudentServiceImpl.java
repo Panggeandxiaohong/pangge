@@ -49,4 +49,9 @@ public class StudentServiceImpl implements IStudentService {
     public List<Student> selectByWechatName(String wechatname) {
         return studentMapper.selectByWechatName(wechatname);
     }
+
+    @Override
+    public List<Student> selectByStunum(Long stunum) {
+        return studentMapper.selectByStunum(stunum);
+    }
 }
