@@ -20,7 +20,6 @@ public interface StudentMapper {
     @Select("select * from student where id=#{id}")
     public Student selectById(@Param("id")Long id);
 
-    @Select("select * from student where stunum=#{stunum}")
     public List<Student> selectByStunum(@Param("stunum")Long stunum);
 
     @Select("select * from student where wechatname=#{wechatname}")
