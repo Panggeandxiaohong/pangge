@@ -93,7 +93,7 @@ public class FileUploadUtil {
                     BufferedInputStream bufferedInputStream = new BufferedInputStream(in);
                     String strSubdir = gbkPath;
                     for(int i = 0 ; i <strSubdir.length();i++){
-                        if(strSubdir.substring(i,i+1).equalsIgnoreCase("/")){
+                        if("/".equalsIgnoreCase(strSubdir.substring(i,i+1))){
                             String temp = strPath+File.separator+strSubdir.substring(0,i);
                             File subDir = new File(temp);
                             if(!subDir.exists()){

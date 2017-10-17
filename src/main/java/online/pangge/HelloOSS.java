@@ -21,8 +21,6 @@
 
 package online.pangge;
 
-import org.apache.commons.lang.StringUtils;
-
 public class HelloOSS {
     // endpoint是访问OSS的域名。如果您已经在OSS的控制台上 创建了Bucket，请在控制台上查看域名。
     // 如果您还没有创建Bucket，endpoint选择请参看文档中心的“开发人员指南 > 基本概念 > 访问域名”，
@@ -47,15 +45,8 @@ public class HelloOSS {
 
     public static void main(String[] args) {
 
+        System.out.println("hello shell!");
 
-
-        String[] a = new String[]{"张三,bbb","李四,ddd","王五,fff"};
-        for (String splits : a){
-            String[] arr = StringUtils.split(splits,",");
-            String username = arr[0];
-            String password = arr[1];
-
-        }
         // 日志配置，OSS Java SDK使用log4j记录错误信息。示例程序会在工程目录下生成“oss-demo.log”日志文件，默认日志级别是INFO。
         // 日志的配置文件是“conf/log4j.properties”，如果您不需要日志，可以没有日志配置文件和下面的日志配置。
 

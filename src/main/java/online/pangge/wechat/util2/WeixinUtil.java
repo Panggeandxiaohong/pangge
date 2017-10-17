@@ -3,8 +3,6 @@ package online.pangge.wechat.util2;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
-import java.util.Date;
-
 public class WeixinUtil {
 
 	public static final String APPID = "wx35a234c06d4fb604";
@@ -19,7 +17,7 @@ public class WeixinUtil {
 
 	public static String getAccessToken() {
 		//如果accessToken为空或者失效时间小于当前时间,则需要重新更新accessToken
-		if (accessToken == null || expiresTime < new Date().getTime()) {
+		if (accessToken == null || expiresTime < System.currentTimeMillis()) {
 			// 获取access_token
 			String str = HttpUtil.get(ACCESS_TOKEN_URL.replace("APPID", APPID)
 					.replace("APPSECRET", APPSECRET));
@@ -28,7 +26,7 @@ public class WeixinUtil {
 			accessToken = json.getString("access_token");
 			Long temp = json.getLong("expires_in");// 7200
 			// 使用当前时间毫秒值 + 有效期的毫秒值 = 失效时间
-			expiresTime = new Date().getTime() + (temp - 60) * 1000;
+			expiresTime = System.currentTimeMillis() + (temp - 60) * 1000;
 		}
 		return accessToken;
 	}

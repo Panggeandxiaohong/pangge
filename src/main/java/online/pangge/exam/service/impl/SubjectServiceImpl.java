@@ -185,7 +185,7 @@ public class SubjectServiceImpl implements ISubjectService {
         if (xssfRow == null) {
             return "";
         }
-        if (xssfRow.getCellType() == xssfRow.CELL_TYPE_NUMERIC) {
+        if (xssfRow.getCellType() == XSSFCell.CELL_TYPE_NUMERIC) {
             return String.valueOf(xssfRow.getNumericCellValue());
         } else {
             return String.valueOf(xssfRow.getStringCellValue());
@@ -197,7 +197,7 @@ public class SubjectServiceImpl implements ISubjectService {
         if (hssfCell == null) {
             return "";
         }
-        if (hssfCell.getCellType() == hssfCell.CELL_TYPE_NUMERIC) {
+        if (hssfCell.getCellType() == HSSFCell.CELL_TYPE_NUMERIC) {
             return String.valueOf(hssfCell.getNumericCellValue());
         } else {
             return String.valueOf(hssfCell.getStringCellValue());

@@ -78,8 +78,9 @@ public class XmlUtil {
     public <T> T fromXml(String xml, boolean caseSensitive) {
         try {
             String fromXml = xml;
-            if (!caseSensitive)
+            if (!caseSensitive){
                 fromXml = xml.toLowerCase();
+            }
             StringReader reader = new StringReader(fromXml);
             return (T) createUnmarshaller().unmarshal(reader);
         } catch (JAXBException e) {

@@ -60,16 +60,16 @@ public class CoreService {
             // 发送方帐号
             String fromUserName = entity.getFromUserName();
             // 开发者微信号
-            String toUserName = entity.getToUserName();//requestMap.get("ToUserName");
+            String toUserName = entity.getToUserName();
             // 消息类型
-            String msgType = entity.getMsgType();//requestMap.get("MsgType");
+            String msgType = entity.getMsgType();
             //消息内容
-            String msg = entity.getContent();//requestMap.get("Content");
+            String msg = entity.getContent();
             // 回复文本消息
             TextMessage textMessage = new TextMessage();
             textMessage.setToUserName(fromUserName);
             textMessage.setFromUserName(toUserName);
-            textMessage.setCreateTime(new Date().getTime());
+            textMessage.setCreateTime(System.currentTimeMillis());
             textMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
             String key = null;
             String responseStr = null;
@@ -186,7 +186,7 @@ public class CoreService {
                 }
                 // 上报地理位置
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_LOCATION)) {
-                    // TODO 处理上报地理位置事件
+                    //处理上报地理位置事件
                 }
                 // 自定义菜单
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {
@@ -225,7 +225,7 @@ public class CoreService {
         NewsMessage newsMessage = new NewsMessage();
         newsMessage.setToUserName(fromUserName);
         newsMessage.setFromUserName(toUserName);
-        newsMessage.setCreateTime(new Date().getTime());
+        newsMessage.setCreateTime(System.currentTimeMillis());
         newsMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);
         newsMessage.setArticleCount(articleList.size());
         newsMessage.setArticles(articleList);

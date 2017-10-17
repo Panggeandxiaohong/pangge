@@ -33,8 +33,9 @@ public class ValidateUtil {
 	 */
 	public static boolean range(String str, int low, int hi) {
 		if (hasLength(str)) {
-			if (str.length() >= low && str.length() <= hi)
+			if (str.length() >= low && str.length() <= hi) {
 				return true;
+			}
 		}
 		return false;
 	}

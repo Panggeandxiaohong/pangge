@@ -51,7 +51,7 @@ public class BeanUtil {
 				String key = property.getName();
 
 				// 过滤class属性
-				if (!key.equals("class")) {
+				if (!"class".equals(key)) {
 					// 得到property对应的getter方法
 					Method getter = property.getReadMethod();
 					Object value = getter.invoke(obj);
