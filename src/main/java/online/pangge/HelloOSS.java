@@ -45,7 +45,7 @@ public class HelloOSS {
 
     public static void main(String[] args) {
 
-        System.out.println("hello shell!");
+        System.out.println("this is my shell!");
 
         // 日志配置，OSS Java SDK使用log4j记录错误信息。示例程序会在工程目录下生成“oss-demo.log”日志文件，默认日志级别是INFO。
         // 日志的配置文件是“conf/log4j.properties”，如果您不需要日志，可以没有日志配置文件和下面的日志配置。
